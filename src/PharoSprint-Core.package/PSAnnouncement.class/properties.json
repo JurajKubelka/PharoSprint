@@ -1,16 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "Announcement",
 	"category" : "PharoSprint-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"user",
-		"fogbugz",
-		"cases",
-		"announcer"
-	],
-	"name" : "PSClient",
+	"instvars" : [ ],
+	"name" : "PSAnnouncement",
 	"type" : "normal"
 }

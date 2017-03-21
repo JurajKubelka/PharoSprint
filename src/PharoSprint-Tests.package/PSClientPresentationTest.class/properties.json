@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "PharoSprint-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"window",
+		"client"
+	],
+	"name" : "PSClientPresentationTest",
+	"type" : "normal"
+}

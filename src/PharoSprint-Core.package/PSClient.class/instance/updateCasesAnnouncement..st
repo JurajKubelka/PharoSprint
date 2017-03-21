@@ -1,6 +1,8 @@
 announcement handling
 updateCasesAnnouncement: aFogBugzCasesUpdatedAnnouncement 
-	aFogBugzCasesUpdatedAnnouncement hasNewCases ifFalse: [ ^ self ].
-	aFogBugzCasesUpdatedAnnouncement newCases do: [ :eachCase | | case |
-		case := PSCase new case: eachCase; yourself.
-		self cases add: case ].
+	| newCases updatedCases |
+	aFogBugzCasesUpdatedAnnouncement hasCases ifFalse: [ ^ self ].
+	newCases := self addNewCases: aFogBugzCasesUpdatedAnnouncement newCases.
+	updatedCases := self updateCases: aFogBugzCasesUpdatedAnnouncement updatedCases.
+	self announce: (PSCasesUpdatedAnnouncement new newCases: newCases; updatedCases: updatedCases).
+	

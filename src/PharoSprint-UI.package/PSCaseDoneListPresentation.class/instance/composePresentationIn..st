@@ -2,7 +2,7 @@ building
 composePresentationIn: browser
 	^ browser fastList
 		display: [ :aSprint | | col | 
-			col := aSprint done sorted: [ :a :b | (aSprint isMyState: a) ].
+			col := aSprint doneAndOpen sorted: [ :a :b | (aSprint isMyState: a) ].
 			col ];
 		format: [ :aCase :aSprint | self threeLineRowFor: aCase sprint: aSprint ];
 		rowHeight: [ :presentation | presentation class defaultRowHeight * 3 ];

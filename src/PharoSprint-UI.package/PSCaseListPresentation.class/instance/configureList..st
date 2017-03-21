@@ -1,8 +1,9 @@
 private - build ui
 configureList: aList
 	^ aList
-		allowItemDrag: [ :item :list | item isGCFogBugCase ];
-		allowDropOnItem: [ :draggedObject :targetItem :list | draggedObject isGCFogBugCase ];
+		updateOn: PSCasesUpdatedAnnouncement from: [ :client | client announcer ];
+		allowItemDrag: [ :item :list | true ];
+		allowDropOnItem: [ :draggedObject :targetItem :list | true ];
 		selectionAct: [ :list :sprint | 
 				list selection ifNotNil: [ :aCase | aCase inspect ] ] 
 			entitled: 'Inspect Case';

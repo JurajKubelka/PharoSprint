@@ -1,3 +1,3 @@
-running
+enumerating
 done
 	^ self cases done

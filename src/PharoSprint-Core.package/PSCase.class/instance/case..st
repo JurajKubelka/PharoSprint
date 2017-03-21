@@ -1,3 +1,4 @@
 accessing
-case: aFogBugzAnnounceableCase 
-	case := aFogBugzAnnounceableCase
+case: aFogBugzCase 
+	case := aFogBugzCase.
+	self announce: (PSCaseUpdatedAnnouncement new case: self; yourself)

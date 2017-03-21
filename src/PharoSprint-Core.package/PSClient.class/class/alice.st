@@ -3,5 +3,5 @@ alice
 	<gtExample>
 	^ self new 
 		user: PSUser alice;
-		fogbugz: FogBugzClient threeCases;
+		fogbugz: FogBugzClient allCases;
 		yourself

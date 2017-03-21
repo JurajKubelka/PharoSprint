@@ -15,7 +15,7 @@ baseline: spec
 			package: #'PharoSprint-Core' with: [
 				spec requires: #( #'FogBugz' #'MQTTChat' ). ];
 			package: #'PharoSprint-Tests' with: [
-				spec requires: #(#'PharoSprint-Core' ). ];
+				spec requires: #( #'PharoSprint-Core' #'PharoSprint-UI' ). ];
 			package: #'PharoSprint-UI' with: [
 				spec requires: #( #'PharoSprint-Core' ). ];
 			group: 'default' with: #( client tests );
