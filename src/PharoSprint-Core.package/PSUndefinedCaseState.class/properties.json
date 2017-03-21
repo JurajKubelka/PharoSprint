@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PSCaseState",
+	"category" : "PharoSprint-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PSUndefinedCaseState",
+	"type" : "normal"
+}

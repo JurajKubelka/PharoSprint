@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PSCaseListPresentation",
+	"category" : "PharoSprint-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PSCaseProposedListPresentation",
+	"type" : "normal"
+}

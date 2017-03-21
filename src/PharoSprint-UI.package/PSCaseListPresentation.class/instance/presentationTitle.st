@@ -1,0 +1,3 @@
+configuration
+presentationTitle
+	^ self subclassResponsibility 

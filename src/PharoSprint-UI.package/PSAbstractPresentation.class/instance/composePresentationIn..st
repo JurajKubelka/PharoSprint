@@ -1,0 +1,3 @@
+building
+composePresentationIn: browser
+	self subclassResponsibility
