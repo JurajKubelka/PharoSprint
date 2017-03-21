@@ -10,9 +10,9 @@ composePresentationIn: browser
 		selectionAct: [ :list :sprint | 
 				list selection ifNotNil: [ :aCase | | aSprint |
 					aSprint := list entity.
-					aCase propose: aSprint developer ] ] 
+					aCase propose: aSprint user ] ] 
 			entitled: 'Propose for Pharo Sprint';
 		dropOnItem: [ :draggedObject :targetItem :list | | aSprint |
 			aSprint := list entity.
-			draggedObject renounce: aSprint developer.
+			draggedObject renounce: aSprint user.
 			true ]

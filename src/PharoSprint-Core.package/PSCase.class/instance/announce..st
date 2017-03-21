@@ -1,3 +1,3 @@
-as yet unclassified
+announce
 announce: aPSAnnouncement 
 	self announcer announce: aPSAnnouncement

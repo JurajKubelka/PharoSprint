@@ -9,6 +9,6 @@ composePresentationIn: browser
 		with: [ :list | self configureList: list ];
 		dropOnItem: [ :draggedObject :targetItem :list | | aSprint |
 			aSprint := list entity.
-			draggedObject take: aSprint developer.
+			draggedObject take: aSprint user.
 			true ]
 		
