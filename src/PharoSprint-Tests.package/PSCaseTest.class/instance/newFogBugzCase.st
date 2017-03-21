@@ -1,3 +1,3 @@
 instance creation
 newFogBugzCase
-	^ FogBugzExamples default case18482
+	^ FogBugzExamples case18482
