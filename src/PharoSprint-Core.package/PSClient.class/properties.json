@@ -9,7 +9,8 @@
 		"user",
 		"fogbugz",
 		"cases",
-		"announcer"
+		"announcer",
+		"ignorePSCaseUpdatedAnnouncement"
 	],
 	"name" : "PSClient",
 	"type" : "normal"

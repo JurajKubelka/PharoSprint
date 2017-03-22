@@ -1,5 +1,5 @@
 tests
-testUpdateCasesAnnouncement
+testHandleFogbugzCasesUpdatedAnnouncement
 	| case1 case2 |
 	client := self newClient user: self newUser; fogbugz: self newFogBugz; yourself.
 	case1 := self newCaseOne.

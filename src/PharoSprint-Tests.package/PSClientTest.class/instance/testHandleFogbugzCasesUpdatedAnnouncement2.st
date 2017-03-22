@@ -1,5 +1,5 @@
 tests
-testUpdateCasesAnnouncement2
+testHandleFogbugzCasesUpdatedAnnouncement2
 	| fogbugz numberOfCases case |
 	fogbugz := FogBugzClient allCases.
 	client := self newClient fogbugz: fogbugz.

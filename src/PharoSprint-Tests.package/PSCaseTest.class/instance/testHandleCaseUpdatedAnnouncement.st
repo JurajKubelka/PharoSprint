@@ -1,5 +1,5 @@
 tests
-testCaseUpdatedAnnouncement
+testHandleCaseUpdatedAnnouncement
 	| fogbugzCase announcements |
 	announcements := OrderedCollection new.
 	fogbugzCase := self newFogBugzCase.

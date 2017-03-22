@@ -1,6 +1,7 @@
 private - build ui
 configureList: aList
 	^ aList
+		updateOn: PSCaseUpdatedAnnouncement from: [ :client | client announcer ];
 		updateOn: PSCasesUpdatedAnnouncement from: [ :client | client announcer ];
 		allowItemDrag: [ :item :list | true ];
 		allowDropOnItem: [ :draggedObject :targetItem :list | true ];
