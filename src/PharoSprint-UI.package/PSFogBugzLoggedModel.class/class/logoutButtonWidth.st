@@ -1,0 +1,3 @@
+defaults
+logoutButtonWidth
+	^ 102

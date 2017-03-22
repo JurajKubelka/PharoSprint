@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposableModel",
+	"category" : "PharoSprint-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fogbugz",
+		"dynamicModel",
+		"loginModel",
+		"labelModel",
+		"loggedModel"
+	],
+	"name" : "PSFogBugzInfoModel",
+	"type" : "normal"
+}

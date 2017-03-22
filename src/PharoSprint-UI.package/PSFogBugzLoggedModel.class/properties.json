@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposableModel",
+	"category" : "PharoSprint-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"infoModel",
+		"logoutButton"
+	],
+	"name" : "PSFogBugzLoggedModel",
+	"type" : "normal"
+}
