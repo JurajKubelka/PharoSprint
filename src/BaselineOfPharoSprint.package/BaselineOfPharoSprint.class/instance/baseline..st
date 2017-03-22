@@ -19,6 +19,6 @@ baseline: spec
 			package: #'PharoSprint-UI' with: [
 				spec requires: #( #'PharoSprint-Core' ). ];
 			group: 'default' with: #( client tests );
-			group: 'client' with: #( #'MQTT-Chat' #'PharoSprint-UI' );
+			group: 'client' with: #( #'PharoSprint-Core' #'PharoSprint-UI' );
 			group: 'tests' with: #( #'PharoSprint-Tests' ).
 	].
