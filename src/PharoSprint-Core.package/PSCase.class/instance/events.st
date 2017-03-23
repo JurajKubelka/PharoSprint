@@ -1,3 +1,3 @@
 accessing
 events
-	^ self case ifNotNil: #events
+	^ self case ifNotNil: #events ifNil: #()
