@@ -1,7 +1,6 @@
 building
 composePresentationIn: browser
 	^ browser fastList 
-			with: [ :aList | self addFogBugzActions: aList ];
 			display: [ :aSprint | | col | 
 				col := aSprint proposedAndOpen.
 				col ];

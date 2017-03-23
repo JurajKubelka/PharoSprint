@@ -1,3 +1,3 @@
-as yet unclassified
+enumerating
 takenAndOpen
 	^ self select: #isTakenAndOpen

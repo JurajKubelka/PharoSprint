@@ -1,3 +1,3 @@
-as yet unclassified
+enumerating
 done
 	^ self select: #isDone

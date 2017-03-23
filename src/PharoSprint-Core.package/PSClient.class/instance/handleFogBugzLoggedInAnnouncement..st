@@ -1,0 +1,3 @@
+announcement handling
+handleFogBugzLoggedInAnnouncement: aFogBugzLoggedInAnnouncement 
+	self fogbugz updateOpenOrRecentlyClosedIssues
