@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "PharoSprint-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fogbugz",
+		"model",
+		"window"
+	],
+	"name" : "PSFogBugzInfoModelTest",
+	"type" : "normal"
+}

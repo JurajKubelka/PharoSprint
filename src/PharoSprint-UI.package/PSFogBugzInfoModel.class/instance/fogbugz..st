@@ -9,6 +9,5 @@ fogbugz: aFogBugzClient
 		subscribe: FogBugzNetworkErrorAnnouncement send: #handleFogBugzNetworkErrorAnnouncement: to: self;
 		subscribe: FogBugzNotLoggedAnnouncement send: #handleFogBugzNotLoggedAnnouncement: to: self;
 		subscribe: FogBugzQueryFinishedAnnouncement send: #handleFogBugzQueryFinishedAnnouncement: to: self;
-		yourself.
-	self setDynamicModel.
-	self updateDynamicModel.
+		subscribe: FogBugzLoggedOutAnnouncement send: #handleFogBugzLoggedOutAnnouncement: to: self.
+	self updateDynamicModelWith: self chooseDynamicModel.

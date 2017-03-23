@@ -1,0 +1,3 @@
+accessing - spec
+loggedModel
+	^ loggedModel

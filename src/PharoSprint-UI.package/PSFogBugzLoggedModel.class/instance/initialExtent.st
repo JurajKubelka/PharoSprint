@@ -1,3 +1,3 @@
 api
 initialExtent
-  ^ 632 @ 80 
+  ^ 632 @ self class extentHeight

@@ -1,0 +1,3 @@
+defaults
+extentHeight
+	^ self inputTextHeight

@@ -1,13 +1,14 @@
 building
 composePresentationIn: browser
 	^ browser tabulator
-		row: #fogbugz size: PSFogBugzLoginModel inputTextHeight;
+		row: #fogbugz size: PSFogBugzInfoModel extentHeight;
 		row: [ :row | row column: #proposedAndAll; column: #taken; column: #done ];
 		row: #details;
 		with: [ :tabulator | 
 			tabulator transmit to: #fogbugz; andShow: [ :composite |
 				composite morph
-					display: [ PSFogBugzLoginModel new buildWithSpec ] ] ];
+					display: [ :client | 
+						PSFogBugzInfoModel new fogbugz: client fogbugz; buildWithSpec ] ] ];
 		with: [ :tabulator |
 			tabulator transmit to: #proposedAndAll; andShow: [ :composite | 
 				composite 

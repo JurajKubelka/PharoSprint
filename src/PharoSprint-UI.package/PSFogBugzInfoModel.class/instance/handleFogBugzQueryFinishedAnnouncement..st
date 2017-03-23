@@ -1,4 +1,4 @@
 announcement handling
-handleFogBugzLoggedInAnnouncement: aFogBugzLoggedInAnnouncement
+handleFogBugzQueryFinishedAnnouncement: aFogBugzQueryFinishedAnnouncement 
 	loggedModel info: self emptyLabel.
 	self updateDynamicModelWith: loggedModel
