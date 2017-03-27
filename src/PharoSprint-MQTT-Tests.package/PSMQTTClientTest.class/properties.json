@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"results",
-		"chat"
+		"chat",
+		"clientId"
 	],
 	"name" : "PSMQTTClientTest",
 	"type" : "normal"

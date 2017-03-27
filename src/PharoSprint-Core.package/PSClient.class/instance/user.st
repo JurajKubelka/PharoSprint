@@ -1,3 +1,3 @@
 accessing
 user
-	^ user ifNil: [ user := PSUser new ]
+	^ user ifNil: [ user := self newUser ]
