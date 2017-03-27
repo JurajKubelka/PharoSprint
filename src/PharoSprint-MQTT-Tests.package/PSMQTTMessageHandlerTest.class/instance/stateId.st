@@ -1,0 +1,3 @@
+defaults
+stateId
+	^ PSTakenCaseState stateId 

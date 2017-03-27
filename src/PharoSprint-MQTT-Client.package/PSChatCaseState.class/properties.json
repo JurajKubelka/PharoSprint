@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "MQTTChatMessageContents",
+	"category" : "PharoSprint-MQTT-Client",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"caseId",
+		"stateId",
+		"user"
+	],
+	"name" : "PSChatCaseState",
+	"type" : "normal"
+}

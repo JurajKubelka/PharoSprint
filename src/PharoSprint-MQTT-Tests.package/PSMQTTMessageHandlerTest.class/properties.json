@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "PharoSprint-MQTT-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"handler",
+		"user",
+		"cases"
+	],
+	"name" : "PSMQTTMessageHandlerTest",
+	"type" : "normal"
+}

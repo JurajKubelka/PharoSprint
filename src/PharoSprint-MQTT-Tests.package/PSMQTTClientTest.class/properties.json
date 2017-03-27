@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "JurajKubelka 3/23/2017 15:50",
+	"super" : "PSClientTest",
+	"category" : "PharoSprint-MQTT-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"results",
+		"chat"
+	],
+	"name" : "PSMQTTClientTest",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PSClient",
+	"category" : "PharoSprint-MQTT-Client",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"chat",
+		"mqttHandler"
+	],
+	"name" : "PSMQTTClient",
+	"type" : "normal"
+}
