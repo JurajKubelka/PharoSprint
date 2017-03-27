@@ -1,3 +1,3 @@
 tests
 testPrintOn
-	self assert: PSClient new printString isString
+	self assert: self newClient printString isString

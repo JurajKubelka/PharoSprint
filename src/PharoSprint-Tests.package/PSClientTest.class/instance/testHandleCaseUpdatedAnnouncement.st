@@ -10,6 +10,6 @@ testHandleCaseUpdatedAnnouncement
 	case2 state: (PSTakenCaseState user: client user).
 	self assert: announcements size equals: 2.
 	self assert: announcements first class equals: PSCasesUpdatedAnnouncement.
-	self assert: announcements second class equals: PSCaseUpdatedAnnouncement.
+	self assert: announcements second class equals: PSCaseStateUpdatedAnnouncement.
 	self assert: announcements second case equals: case2.
 	

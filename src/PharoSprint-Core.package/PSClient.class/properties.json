@@ -10,8 +10,7 @@
 		"fogbugz",
 		"cases",
 		"announcer",
-		"ignorePSCaseUpdatedAnnouncement",
-		"chat"
+		"ignorePSCaseUpdatedAnnouncement"
 	],
 	"name" : "PSClient",
 	"type" : "normal"

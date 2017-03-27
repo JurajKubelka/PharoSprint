@@ -6,4 +6,4 @@ fogbugz: aFogBugzClient
 		subscribe: FogBugzCasesUpdatedAnnouncement send: #handleFogbugzCasesUpdatedAnnouncement: to: self;
 		subscribe: FogBugzLoggedInAnnouncement send: #handleFogBugzLoggedInAnnouncement: to: self;
 		subscribe: FogBugzAlreadyLoggedAnnouncement send: #handleFogBugzAlreadyLoggedAnnouncement: to: self.
-	self addNewCases: fogbugz cases.
+	self addNewFogBugzCases: fogbugz cases.
