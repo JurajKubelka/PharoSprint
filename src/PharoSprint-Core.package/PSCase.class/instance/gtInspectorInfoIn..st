@@ -1,4 +1,4 @@
-as yet unclassified
+gt-inspector-extension
 gtInspectorInfoIn: composite 
 	<gtInspectorPresentationOrder: 0>
 	^ composite morph 

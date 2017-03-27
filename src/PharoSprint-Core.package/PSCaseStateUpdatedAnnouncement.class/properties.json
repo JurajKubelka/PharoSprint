@@ -1,18 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "PSCaseUpdatedAnnouncement",
 	"category" : "PharoSprint-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"user",
-		"fogbugz",
-		"cases",
-		"announcer",
-		"ignorePSCaseUpdatedAnnouncement",
-		"chat"
+		"previousState",
+		"actualState"
 	],
-	"name" : "PSClient",
+	"name" : "PSCaseStateUpdatedAnnouncement",
 	"type" : "normal"
 }

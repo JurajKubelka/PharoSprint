@@ -1,4 +1,4 @@
-as yet unclassified
+gt-inspector-extension
 gtInspectorEventsIn: composite 
 	<gtInspectorPresentationOrder: 1>
 	^ (FogBugzInspectorExtensions gtInspectorEventsIn: composite)

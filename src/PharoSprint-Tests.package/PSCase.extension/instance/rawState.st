@@ -1,0 +1,3 @@
+*PharoSprint-Tests
+rawState
+	^ state

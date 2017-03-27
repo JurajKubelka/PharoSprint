@@ -1,18 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "MQTTChatMessageContents",
 	"category" : "PharoSprint-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"user",
-		"fogbugz",
-		"cases",
-		"announcer",
-		"ignorePSCaseUpdatedAnnouncement",
-		"chat"
+		"caseId",
+		"stateId",
+		"user"
 	],
-	"name" : "PSClient",
+	"name" : "PSChatCaseState",
 	"type" : "normal"
 }
