@@ -1,0 +1,3 @@
+testing
+isPSChatCaseState
+	^ true

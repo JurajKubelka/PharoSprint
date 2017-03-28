@@ -8,7 +8,8 @@
 	"instvars" : [
 		"handler",
 		"user",
-		"cases"
+		"cases",
+		"messages"
 	],
 	"name" : "PSMQTTMessageHandlerTest",
 	"type" : "normal"

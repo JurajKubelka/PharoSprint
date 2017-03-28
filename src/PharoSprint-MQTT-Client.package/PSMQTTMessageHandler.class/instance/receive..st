@@ -1,3 +1,4 @@
 public
 receive: aMQTTChatMessage 
-	aMQTTChatMessage accept: self
+	mutex critical: [ 
+		aMQTTChatMessage accept: self ]

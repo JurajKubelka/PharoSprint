@@ -1,0 +1,3 @@
+announcement handling
+handleMQTTChatHistoryReceivedAnnouncement: aMQTTChatHistoryReceivedAnnouncement 
+	mqttHandler receive: aMQTTChatHistoryReceivedAnnouncement history

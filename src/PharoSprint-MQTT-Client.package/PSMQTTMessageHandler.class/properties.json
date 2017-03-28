@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"client"
+		"client",
+		"mutex"
 	],
 	"name" : "PSMQTTMessageHandler",
 	"type" : "normal"
