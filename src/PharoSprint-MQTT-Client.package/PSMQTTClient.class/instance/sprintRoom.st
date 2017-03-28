@@ -1,3 +1,3 @@
 accessing
 sprintRoom
-	^ self chat roomId: self roomId
+	^ self chat roomWithId: self roomId

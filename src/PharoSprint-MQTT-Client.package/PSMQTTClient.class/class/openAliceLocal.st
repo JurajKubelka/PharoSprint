@@ -1,6 +1,6 @@
 examples
 openAliceLocal
-	<script: 'self openAliceLocal inspect'>
+	<script: 'self openAliceLocal'>
 	| alice aliceUI |
 	alice := self aliceLocal.
 	aliceUI := alice open.

@@ -1,6 +1,6 @@
 examples
 openPedroLocal
-	<script: 'self openPedroLocal inspect'>
+	<script: 'self openPedroLocal'>
 	| pedro pedroUI |
 	pedro := self pedroLocal.
 	pedroUI := pedro open.
