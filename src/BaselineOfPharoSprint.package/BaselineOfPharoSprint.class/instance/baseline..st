@@ -24,8 +24,8 @@ baseline: spec
 				spec requires: #( #'PharoSprint-MQTT-Client' #'PharoSprint-MQTT-UI' ). ];
 			package: #'PharoSprint-MQTT-UI' with: [
 				spec requires: #( #'PharoSprint-MQTT-Client' #'PharoSprint-UI' ). ];
-			group: 'default' with: #( core mqtt-client tests );
-			group: 'core' with: #( #'PharoSprint-Core' #'PharoSprint-UI' );
-			group: 'mqtt-client' with: #( #'PharoSprint-MQTT-Client' #'PharoSprint-MQTT-UI' );
-			group: 'tests' with: #( #'PharoSprint-Tests' #'PharoSprint-MQTT-Tests' ).
+			group: #'default' with: #( #'core' #'mqtt-client' #'tests' );
+			group: #'core' with: #( #'PharoSprint-Core' #'PharoSprint-UI' );
+			group: #'mqtt-client' with: #( #'PharoSprint-MQTT-Client' #'PharoSprint-MQTT-UI' );
+			group: #'tests' with: #( #'PharoSprint-Tests' #'PharoSprint-MQTT-Tests' ).
 	].
