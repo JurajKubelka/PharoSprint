@@ -12,12 +12,17 @@ baseline: spec
 				spec
 					repository: 'github://JurajKubelka/MQTTChat/repository';
 					loads: 'default' ];
+			project: #'WebBrowser' with: [
+				spec
+					className: #ConfigurationOfWebBrowser;
+					versionString: #'stable';
+					repository: 'http://smalltalkhub.com/mc/TorstenBergmann/WebBrowser/main/' ];
 			package: #'PharoSprint-Core' with: [
 				spec requires: #( #'FogBugz' ). ];
 			package: #'PharoSprint-Tests' with: [
 				spec requires: #( #'PharoSprint-Core' #'PharoSprint-UI' ). ];
 			package: #'PharoSprint-UI' with: [
-				spec requires: #( #'PharoSprint-Core' ). ];
+				spec requires: #( #'PharoSprint-Core' #'WebBrowser' ). ];
 			package: #'PharoSprint-MQTT-Client' with: [
 				spec requires: #( #'PharoSprint-Core' #'MQTTChat' ). ];
 			package: #'PharoSprint-MQTT-Tests' with: [
