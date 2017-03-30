@@ -26,7 +26,7 @@ after_success:
   - cd $SMALLTALK_CI_BUILD
   - cp TravisCI.image PharoSprint.image
   - cp TravisCI.chantes PharoSprint.changes
- after_failure:
+after_failure:
   - benchupload --dir=$SMALLTALK_CI_BUILD
 
 deploy:
@@ -38,5 +38,3 @@ deploy:
   on:
     branch: master
     repo: JurajKubelka/PharoSprint
-
-
