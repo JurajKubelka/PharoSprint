@@ -22,6 +22,7 @@ smalltalk:
 # bob-bench xUnit file analysis
 after_success:
   - benchupload --dir=$SMALLTALK_CI_BUILD
+  - ls -laR
 after_failure:
   - benchupload --dir=$SMALLTALK_CI_BUILD
 
