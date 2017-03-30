@@ -1,8 +1,7 @@
 tests
 testReceiveTakenCaseInformation
-	| alice pedro |
+	| alice |
 	alice := self newAlice.
-	pedro := self newPedro.
 	client := self newClient fogbugz: self newFogBugz; chat: chat; user: alice; yourself.
 	client fogbugz cases updateCases: { self newCaseOne }.
 	self assert: client cases size equals: 1.

@@ -8,5 +8,4 @@ handleCaseStateUpdatedAnnouncement: aPSCaseStateUpdatedAnnouncement
 		caseId: aPSCaseStateUpdatedAnnouncement case id;
 		stateId: aPSCaseStateUpdatedAnnouncement actualState stateId.
 	self chat sendMessageContents: contents toRoomId: self roomId.
-	self handleCaseUpdatedAnnouncement: aPSCaseStateUpdatedAnnouncement.
 	
