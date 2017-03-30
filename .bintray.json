@@ -10,7 +10,7 @@
     },
     "files": [
         {
-				"includePattern": "./(pharo-.*\\.(?:gz|zip))", 
+				"includePattern": "PharoSprint.*", 
 				"uploadPattern": "$1", 
 				"matrixParams": { "override": 1 }
 		}
