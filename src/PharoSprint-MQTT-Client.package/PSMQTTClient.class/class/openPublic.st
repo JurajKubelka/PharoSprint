@@ -1,4 +1,8 @@
 gui
 openPublic
 	<script>
-	^ self public open
+	| instance ui |
+	instance := self public.
+	ui := instance open.
+	ui onAnnouncement: WindowClosed do: [ instance disconnect ].
+	^ ui
