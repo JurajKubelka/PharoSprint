@@ -24,3 +24,14 @@ after_success:
   - benchupload --dir=$SMALLTALK_CI_BUILD
 after_failure:
   - benchupload --dir=$SMALLTALK_CI_BUILD
+
+deploy:
+  provider: bintray
+  skip_cleanup: true
+  file: .bintray.json
+  user: $BINTRAY_USER
+  key: $BINTRAY_API_KEY
+  on:
+    branch: master
+    repo: JurajKubelka/PharoSprint
+  dry-run: true
