@@ -6,6 +6,7 @@ configurePresentation: browser
 			ifNil: [ '<annonymous>' ]), '''s Pharo Sprint Dashboard' ];
 		addAction: self openHelpBrowserAction;
 		addAction: self openSendUsFeedbackAction;
+		addAction: self openIssueTrackerAction;
 		with: [ :aBrowser |
 			self debugMode ifTrue: [ 
 				aBrowser 
