@@ -2,7 +2,7 @@
     "package": {
         "name": "build",
         "repo": "PharoSprint",
-		"subject": "JurajKubelka"
+	"subject": "jurajkubelka"
     },
     "version": {
         "name": "$Rev$",
@@ -10,10 +10,10 @@
     },
     "files": [
         {
-				"includePattern": "PharoSprint.*", 
-				"uploadPattern": "$1", 
-				"matrixParams": { "override": 1 }
-		}
+	    "includePattern": "PharoSprint.*", 
+	    "uploadPattern": "$1", 
+	    "matrixParams": { "override": 1 }
+	}
     ],
     "publish": true
 }
