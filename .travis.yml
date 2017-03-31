@@ -22,12 +22,12 @@ smalltalk:
 # bob-bench xUnit file analysis
 after_success:
   - benchupload --dir=$SMALLTALK_CI_BUILD
-  - ls -laR $SMALLTALK_CI_BUILD
-  - cd $SMALLTALK_CI_BUILD
-  - cp TravisCI.image PharoSprint.image
-  - cp TravisCI.chantes PharoSprint.changes
 after_failure:
   - benchupload --dir=$SMALLTALK_CI_BUILD
+
+before_deploy:
+  - cp $SMALLTALK_CI_BUILD/TravisCI.image PharoSprint.image
+  - cp $SMALLTALK_CI_BUILD/TravisCI.changes PharoSprint.changes
 
 deploy:
   provider: bintray

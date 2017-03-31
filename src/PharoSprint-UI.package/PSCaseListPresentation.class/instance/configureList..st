@@ -7,11 +7,11 @@ configureList: aList
 		allowDropOnItem: [ :draggedObject :targetItem :list | true ];
 		selectionAct: [ :list :sprint | 
 				list selection ifNotNil: [ :aCase | self openWebBrowserOnCase: aCase ] ] 
-			entitled: 'Open Case In Web Browser';
+			entitled: 'Open case in web browser';
 		selectionAct: [ :list :sprint | 
 				list selection ifNotNil: [ :aCase | self openSlackOnCase: aCase ] ] 
-			entitled: 'Discuss Case On Slack';
+			entitled: 'Discuss case on Slack';
 		selectionAct: [ :list :sprint | 
 				list selection ifNotNil: [ :aCase | aCase inspect ] ] 
-			entitled: 'Inspect Case';
+			entitled: 'Inspect case';
 		yourself

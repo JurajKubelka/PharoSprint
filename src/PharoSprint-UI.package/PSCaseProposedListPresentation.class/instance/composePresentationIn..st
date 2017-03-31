@@ -6,6 +6,11 @@ composePresentationIn: browser
 				col ];
 			format: [ :aCase :aSprint | self twoLineRowFor: aCase sprint: aSprint ];
 			rowHeight: [ :presentation | presentation class defaultRowHeight * 2 ];
+			selectionAct: [ :list :sprint | 
+					list selection ifNotNil: [ :aCase | | aSprint |
+						aSprint := list entity.
+						aCase take: aSprint user ] ] 
+				entitled: 'Take case';
 			with: [ :list | self configureList: list ];
 			dropOnItem: [ :draggedObject :targetItem :list | | aSprint |
 				aSprint := list entity.
