@@ -1,5 +1,6 @@
 private
 rawUpdateCaseState: aPSCase 
+	client isConnected ifFalse: [ ^ self ].
 	client sprintRoomMessages reverseDo: [ :message |
 		(message contents isPSChatCaseState and: [ 
 			message contents caseId = aPSCase id ])
