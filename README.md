@@ -4,6 +4,10 @@ Pharo Sprint Application to support coordination and collaboration during Bug Da
 
 Implemented in [Pharo](http://pharo.org). 
 
+## Introduction
+
+![](assets/img/main-window.png]
+
 ## Installation
 
 ```
