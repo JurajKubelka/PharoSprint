@@ -6,7 +6,7 @@ Implemented in [Pharo](http://pharo.org).
 
 ## Introduction
 
-![](assets/img/main-window.png]
+![Main application window](assets/img/main-window.png)
 
 ## Installation
 
