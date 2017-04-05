@@ -5,12 +5,12 @@
 	"subject": "jurajkubelka"
     },
     "version": {
-        "name": "2",
+        "name": "3",
         "desc": "Automatic build of the GitHub commit $TRAVIS_COMMIT."
     },
     "files": [
         {
-	    "includePattern": "(PharoSprint-.*\\.zip)", 
+	    "includePattern": "./(PharoSprint-.*\\.zip)", 
 	    "uploadPattern": "$1", 
 	    "matrixParams": { "override": 1 }
 	}
