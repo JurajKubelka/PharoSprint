@@ -31,7 +31,9 @@ after_failure:
 before_deploy:
   - cp $SMALLTALK_CI_BUILD/TravisCI.image PharoSprint.image
   - cp $SMALLTALK_CI_BUILD/TravisCI.changes PharoSprint.changes
-
+  - zip "PharoSprint-$REVISION.zip" PharoSprint.image PharoSprint.changes
+  - ls -la .
+  
 deploy:
   provider: bintray
   skip_cleanup: true
