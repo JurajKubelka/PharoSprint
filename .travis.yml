@@ -6,10 +6,13 @@ install:
 
 os:
   - linux
-  - osx
+#  - osx
 
 smalltalk:
   - Pharo-6.0
+
+env:
+  - REVISION="$(date -u +%Y%m%d%H%M%S)-$TRAVIS_BUILD_NUMBER"
 
 # before_install:
 #   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update ; fi
@@ -38,4 +41,4 @@ deploy:
   on: 
     branch: master
     repo: JurajKubelka/PharoSprint
-    condition:  "$TRAVIS_OS_NAME = osx"
+    condition:  "$TRAVIS_OS_NAME = linux"
