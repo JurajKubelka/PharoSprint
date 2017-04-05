@@ -32,7 +32,7 @@ before_deploy:
   - cp $SMALLTALK_CI_BUILD/TravisCI.image PharoSprint.image
   - cp $SMALLTALK_CI_BUILD/TravisCI.changes PharoSprint.changes
   - zip "PharoSprint-$REVISION.zip" PharoSprint.image PharoSprint.changes
-  - ls -la .
+  - sed -i.bak -e 's/$Rev\$/'"$REVISION"'/' -e  's/$Commit\$/'"$TRAVIS_COMMIT"'/' .bintray.json
   
 deploy:
   provider: bintray

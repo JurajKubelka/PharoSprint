@@ -5,8 +5,8 @@
 	"subject": "jurajkubelka"
     },
     "version": {
-        "name": "3",
-        "desc": "Automatic build of the GitHub commit $TRAVIS_COMMIT."
+        "name": "$Rev$",
+        "desc": "Automatic build of the GitHub commit $Commit$."
     },
     "files": [
         {
