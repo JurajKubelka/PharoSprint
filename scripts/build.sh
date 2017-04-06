@@ -6,16 +6,42 @@ export ERR_MISSING_FILE=3
 export ERR_NOSERVER=4
 export WORKING_DIR=build
 
+
+### Define revision number ###
+
+if [[ -z "$REVISION" ]] ; then
+    if [[ -n "$TRAVIS_BUILD_NUMBER" ]] ; then 
+	BUILD_NUMBER="-$TRAVIS_BUILD_NUMBER"
+    else
+	BUILD_NUMBER="$(date -u +%S)"
+    fi
+    REVISION="$(date -u +%Y%m%d%H%M)${BUILD_NUMBER}"
+    export REVISION
+fi
+
+### Define GIT branch of GIT commit id ###
+
+if [[ -n "$TRAVIS_COMMIT" ]] ; then
+    BRANCH="$TRAVIS_COMMIT"
+elif git rev-parse --is-inside-work-tree > /dev/null 2>&1 ; then
+    BRANCH="$(git rev-parse HEAD)"
+else
+    BRANCH="master"
+fi
+export BRANCH
+
+
 function help {
     echo "USAGE: $0 <arguments> [server name]"
     echo "       -4  download Pharo 4.0 (image, changes, VM)"
     echo "       -5  download Pharo 5.0 (image, changes, VM)"
     echo "       -6  download Pharo 6.0 (image, changes, VM)"
     echo "       -c  configure [name] image"
+    echo "       -z  compress [name] image as ZIP"
     echo "       -r  run the [name] image"
     echo " server name can be:"
-    echo "       sprint    Sprint Client"
-    echo "       webhooks  FogBugz Webhooks to IoT Delegate Server"
+    echo "       PharoSprint    Pharo Sprint Client"
+#    echo "       webhooks       FogBugz Webhooks to IoT Delegate Server"
     echo ""
 }
 
@@ -58,7 +84,7 @@ function downloadPharoImageAndVM {
 function runPharoScript {
     # $1 Pharo image
     # $2 Pharo script
-    PHARO="./pharo"
+    PHARO="./pharo-ui"
     if [ ! -r "$PHARO" ] ; then
 	echo "Missing Pharo VM called $PHARO in $PWD directory." >&2
 	exit $ERR_MISSING_FILE
@@ -74,9 +100,30 @@ function runPharoScript {
     $PHARO "$1" "$2"
 }
 
+# function configure {
+#     # $1 <server-name>
+#     runPharoScript Pharo.image "../configure-${1}.st"
+# }
+
+function prepareScript {
+    # $1 <image name>
+    sed -e 's/$REVISION\$/'"$REVISION"'/' -e  's/$BRANCH\$/'"$BRANCH"'/' "../configuration-${1}.st" > "./configuration-${1}.st"
+}
+    
 function configure {
-    # $1 <server-name>
-    runPharoScript Pharo.image "../configure-${1}.st"
+    # $1 <image name>
+    if [ ! -r "../configuration-${1}.st" ] ; then
+	echo "Configuration file does not exists." >&2
+	exit $ERR_MISSING_FILE
+    fi
+    prepareScript "$1"
+    runPharoScript Pharo.image "./configuration-${1}.st"
+}
+
+function compressImage {
+    # $1 <image name>
+    FILENAME="$(ls ${1}* | head -1)"
+    zip "${FILENAME%.*}.zip" ${1}*.image ${1}*.changes
 }
 
 function run {
@@ -85,7 +132,7 @@ function run {
 }
 
 # Parse allowed parameters
-args=$(getopt 456crhn: $*)
+args=$(getopt 456crhzn: $*)
 
 if [ $? != 0 ] ; then
     help
@@ -123,6 +170,11 @@ do
 	    ARG_OK=true
 	    shift
 	    ;;
+	-z)
+	    ARG_ZIP=true
+	    ARG_OK=true
+	    shift
+	    ;;
 	-h)
 	    ARG_HELP=true
 	    shift
@@ -151,7 +203,7 @@ if [ ! "$ARG_OK" ] ; then
 fi
 
 if [ \( -n "$ARG_CONFIGURE" -o -n "$ARG_RUN" \) -a -z "$ARG_SERVER" ] ; then
-    echo "You have to decide what server to configure or run. Use parameter -n." >&2
+    echo "You have to decide what image to configure or run. Use parameter -n." >&2
     help
     exit $ERR_NOSERVER
 fi
@@ -170,6 +222,13 @@ if [ "$ARG_CONFIGURE" ] ; then
     echo "### Configure "$ARG_SERVER" Image ###"
     echo
     configure "$ARG_SERVER"
+fi
+
+if [ "$ARG_ZIP" ] ; then
+    echo
+    echo "### Compress "$ARG_SERVER" Image ###"
+    echo
+    compressImage "$ARG_SERVER"
 fi
 
 if [ "$ARG_RUN" ] ; then

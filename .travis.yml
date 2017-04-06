@@ -12,7 +12,7 @@ smalltalk:
   - Pharo-6.0
 
 env:
-  - REVISION="$(date -u +%Y%m%d%H%M%S)-$TRAVIS_BUILD_NUMBER"
+  - REVISION="$(date -u +%Y%m%d%H%M)-$TRAVIS_BUILD_NUMBER"
 
 # before_install:
 #   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update ; fi
@@ -29,9 +29,9 @@ after_failure:
   - benchupload --dir=$SMALLTALK_CI_BUILD
 
 before_deploy:
-  - cp $SMALLTALK_CI_BUILD/TravisCI.image PharoSprint.image
-  - cp $SMALLTALK_CI_BUILD/TravisCI.changes PharoSprint.changes
-  - zip "PharoSprint-$REVISION.zip" PharoSprint.image PharoSprint.changes
+  # build image and change files and compress them into one ZIP file
+  - ( cd scripts && ./build.sh -6cz -n PharoSprint )
+  # set version and commit id for the bintray configuration
   - sed -i.bak -e 's/$Rev\$/'"$REVISION"'/' -e  's/$Commit\$/'"$TRAVIS_COMMIT"'/' .bintray.json
   
 deploy:
