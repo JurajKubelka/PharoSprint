@@ -97,7 +97,7 @@ function runPharoScript {
 	echo "Missing script file '$2' in $PWD directory." >&2
 	exit $ERR_MISSING_FILE
     fi
-    $PHARO "$1" "$2"
+    $PHARO "$1" --no-default-preferences "$2"
 }
 
 # function configure {
@@ -122,8 +122,8 @@ function configure {
 
 function compressImage {
     # $1 <image name>
-    FILENAME="$(ls ${1}* | head -1)"
-    zip "${FILENAME%.*}.zip" ${1}*.image ${1}*.changes
+    FILENAME="$(ls ${1}*${REVISION}* | head -1)"
+    zip "${FILENAME%.*}.zip" ${1}*${REVISION}*.image ${1}*${REVISION}*.changes
 }
 
 function run {
