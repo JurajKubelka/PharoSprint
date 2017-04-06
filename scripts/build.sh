@@ -84,7 +84,7 @@ function downloadPharoImageAndVM {
 function runPharoScript {
     # $1 Pharo image
     # $2 Pharo script
-    PHARO="./pharo-ui"
+    PHARO="./pharo"
     if [ ! -r "$PHARO" ] ; then
 	echo "Missing Pharo VM called $PHARO in $PWD directory." >&2
 	exit $ERR_MISSING_FILE

@@ -10,7 +10,7 @@
     },
     "files": [
         {
-	    "includePattern": "./(PharoSprint-.*\\.zip)", 
+	    "includePattern": "./scripts/build/(PharoSprint-.*\\.zip)", 
 	    "uploadPattern": "$1", 
 	    "matrixParams": { "override": 1 }
 	}
