@@ -1,0 +1,3 @@
+initialization
+setDebugMode
+	DebugMode := true

@@ -4,7 +4,9 @@
 	"category" : "PharoSprint-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"DebugMode"
+	],
 	"instvars" : [ ],
 	"name" : "PSAbstractPresentation",
 	"type" : "normal"
