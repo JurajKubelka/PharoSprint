@@ -29,10 +29,7 @@ after_failure:
   - benchupload --dir=$SMALLTALK_CI_BUILD
 
 before_deploy:
-  # build image and change files and compress them into one ZIP file
-  - ( cd scripts && ./build.sh -6cz -n PharoSprint )
-  # set version and commit id for the bintray configuration
-  - sed -i.bak -e 's/$Rev\$/'"$REVISION"'/' -e  's/$Commit\$/'"$TRAVIS_COMMIT"'/' -e 's/CommitMessage\$/'"$TRAVIS_COMMIT_MESSAGE"'/' .bintray.json
+  -  if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./scripts/before-deploy.sh ; fi
   
 deploy:
   provider: bintray

@@ -6,9 +6,7 @@
     },
     "version": {
         "name": "$Rev$",
-        "desc": "Automatic build of the GitHub commit $Commit$.
-
-Commit message: $CommitMessage$"
+        "desc": "Automatic build of the GitHub commit $Commit$.\n\nCommit message: $CommitMessage$"
     },
     "files": [
         {
