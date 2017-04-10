@@ -4,6 +4,11 @@ baseline: spec
 
 	spec for: #'common' do: [
 		spec 
+			configuration: 'GlamourCore' with: [ 
+				spec 
+					repository: 'http://smalltalkhub.com/mc/Moose/Glamour/main/';
+					versionString: #'development';
+					loads: 'default' ];
 			baseline: #'FogBugz' with: [
 				spec
 					repository: 'github://JurajKubelka/FogBugz/src';
@@ -22,7 +27,7 @@ baseline: spec
 			package: #'PharoSprint-Tests' with: [
 				spec requires: #( #'PharoSprint-Core' #'PharoSprint-UI' ). ];
 			package: #'PharoSprint-UI' with: [
-				spec requires: #( #'PharoSprint-Core' #'WebBrowser' ). ];
+				spec requires: #( #'PharoSprint-Core' #'WebBrowser' #GlamourCore ). ];
 			package: #'PharoSprint-MQTT-Client' with: [
 				spec requires: #( #'PharoSprint-Core' #'MQTTChat' ). ];
 			package: #'PharoSprint-MQTT-Tests' with: [
