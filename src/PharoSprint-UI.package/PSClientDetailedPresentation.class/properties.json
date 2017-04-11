@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "PSClientDetailedPresentation",
-	"category" : "PharoSprint-MQTT-UI",
+	"super" : "PSClientPresentation",
+	"category" : "PharoSprint-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "PSMQTTClientPresentation",
+	"name" : "PSClientDetailedPresentation",
 	"type" : "normal"
 }

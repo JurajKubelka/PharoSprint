@@ -1,9 +1,8 @@
 building
 composePresentationIn: browser
 	^ browser tabulator
-		row: #fogbugz size: PSFogBugzInfoModel extentHeight;
-		row: [ :row | row column: #proposedAndAll; column: #taken; column: #done ];
-		row: #details;
+		with: [ :tabulator |
+			self composeLayout: tabulator ];
 		with: [ :tabulator | 
 			tabulator transmit to: #fogbugz; andShow: [ :composite |
 				composite morph

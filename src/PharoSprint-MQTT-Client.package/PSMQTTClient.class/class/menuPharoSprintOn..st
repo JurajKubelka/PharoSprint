@@ -6,4 +6,9 @@ menuPharoSprintOn: aBuilder
 		order: 10;
 		icon: #glamorousInspect asIcon;
 		parent: #Collaboration;
-		action: [ self openPublic ]
+		action: [ self openPublic ].
+	(aBuilder item: #'Pharo Sprint Detailed')
+		order: 20;
+		icon: #glamorousInspect asIcon;
+		parent: #Collaboration;
+		action: [ self openDetailedPublic ]

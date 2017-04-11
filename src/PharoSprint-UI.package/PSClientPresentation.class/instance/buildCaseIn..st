@@ -1,6 +1,6 @@
 private - building
 buildCaseIn: composite
-	^ composite 
-		custom: (PSCasePresentation new title: nil; yourself);
-		title: nil;
+	"You can overwrite it"
+	^ composite text
+		display: [ :case | case title ];
 		yourself

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PharoSprint-UI",
+	"classinstvars" : [
+		"icons"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PSIcons",
+	"type" : "normal"
+}
