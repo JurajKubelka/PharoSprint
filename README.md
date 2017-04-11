@@ -11,9 +11,31 @@ Implemented in [Pharo](http://pharo.org).
 
 ## Introduction
 
+You can open the application from the World menu. Currently, there are two options:
+- simplified UI that displays only lists of all, proposed, taken, and done cases
+- detailed UI that displays the same lists and details for a selected case below
+
+### Simplified UI
+
+As you can see below, you can also filter cases according to case title, state, and participated users.
+
 ![Main application window](assets/img/main-window.png)
 
+### Detailed UI
+
+![Detailed application window](assets/img/detailed-window.png)
+
+### Case Info and Details
+
+You can also browse case details in a new window. 
+
+![Main application window](assets/img/case-info.png)
+
+![Main application window](assets/img/case-events.png)
+
 ## Installation
+
+You can download the latest image from the batch above or install it in the latest Pharo 6 image using:
 
 ```
 Metacello new
