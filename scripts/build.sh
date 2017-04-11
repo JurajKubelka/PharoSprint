@@ -4,8 +4,9 @@ export ERR_NOARGS=1
 export ERR_DIR=2
 export ERR_MISSING_FILE=3
 export ERR_NOSERVER=4
+export ERR_ZIP_LS=5
+export ERR_ZIP_COMPRESS=6
 export WORKING_DIR=build
-
 
 ### Define revision number ###
 
@@ -122,8 +123,13 @@ function configure {
 
 function compressImage {
     # $1 <image name>
+    if ! ls ${1}*${REVISION}* ; then
+	exit $ERR_ZIP_LS
+    fi
     FILENAME="$(ls ${1}*${REVISION}* | head -1)"
-    zip "${FILENAME%.*}.zip" ${1}*${REVISION}*.image ${1}*${REVISION}*.changes
+    if ! zip "${FILENAME%.*}.zip" ${1}*${REVISION}*.image ${1}*${REVISION}*.changes ; then
+	exit $ERR_ZIP_COMPRESS
+    fi
 }
 
 function run {
