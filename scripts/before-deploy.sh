@@ -13,7 +13,9 @@ fi
 # note that sed -E part does not work on OS X, as we deploy only on Linux, we do not care
 echo "---"
 echo "$TRAVIS_COMMIT_MESSAGE"
-ONELINE_MESSAGE="$(echo "$TRAVIS_COMMIT_MESSAGE" | sed -e :a -e N -e '$!ba' -e 's/\n/\\n/g' -e 's/"/\\"/g')"
+set -x
+ONELINE_MESSAGE="$(echo "$TRAVIS_COMMIT_MESSAGE" | sed -e :a -e N -e '$!ba' -e 's/\n/\\n/g' -e 's/"/\\"/g' | tr '\n\r' '..')"
+set +x
 echo "---"
 echo "$ONELINE_MESSAGE"
 echo "---"
