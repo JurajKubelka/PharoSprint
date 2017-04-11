@@ -35,7 +35,7 @@ You can also browse case details in a new window.
 
 ## Installation
 
-You can download the latest image from the batch above or install it in the latest Pharo 6 image using:
+You can download [the latest image from Bintray](https://bintray.com/jurajkubelka/PharoSprint/build/_latestVersion#files) or install it in the latest Pharo 6 image using:
 
 ```
 Metacello new
