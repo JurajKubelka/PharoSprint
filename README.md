@@ -43,3 +43,7 @@ Metacello new
     repository: 'github://JurajKubelka/PharoSprint/src';
     load.
 ```
+
+## Contribution & Ideas
+
+If you have any idea how to improve this application, [open a new issue](https://github.com/JurajKubelka/PharoSprint/issues/new) or clone this repositry and make the contribution :-)
