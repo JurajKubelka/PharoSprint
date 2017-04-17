@@ -33,6 +33,12 @@ You can also browse case details in a new window.
 
 ![Main application window](assets/img/case-events.png)
 
+### Discord Integration
+
+Pharo Sprint Application is integrated with Discord and is able to inform about user activities (and case changes) in a particular Discord channel.
+
+![Main application window](assets/img/discord-integration.png)
+
 ## Installation
 
 You can download [the latest image from Bintray](https://bintray.com/jurajkubelka/PharoSprint/build/_latestVersion#files) or install it in the latest Pharo 6 image using:

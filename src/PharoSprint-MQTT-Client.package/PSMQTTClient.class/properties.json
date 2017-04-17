@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "PSClient",
+	"super" : "PSClientWithPlugins",
 	"category" : "PharoSprint-MQTT-Client",
 	"classinstvars" : [ ],
 	"pools" : [ ],

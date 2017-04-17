@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JurajKubelka 4/17/2017 17:00",
+	"super" : "Object",
+	"category" : "PharoSprint-Plugins-Core-PharoSprint-Plugins-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PSPlugin",
+	"type" : "normal"
+}

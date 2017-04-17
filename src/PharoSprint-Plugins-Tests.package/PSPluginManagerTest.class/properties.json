@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "PharoSprint-Plugins-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"manager"
+	],
+	"name" : "PSPluginManagerTest",
+	"type" : "normal"
+}

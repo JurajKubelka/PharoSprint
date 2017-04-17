@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JurajKubelka 4/17/2017 17:21",
+	"super" : "PSClient",
+	"category" : "PharoSprint-Plugins-Core-PharoSprint-Plugins-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pluginManager"
+	],
+	"name" : "PSClientWithPlugins",
+	"type" : "normal"
+}

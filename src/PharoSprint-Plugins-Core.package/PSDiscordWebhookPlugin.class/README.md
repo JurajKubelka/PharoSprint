@@ -1,0 +1,1 @@
+I send a info message to a Discord channel whenever a case state is changed.

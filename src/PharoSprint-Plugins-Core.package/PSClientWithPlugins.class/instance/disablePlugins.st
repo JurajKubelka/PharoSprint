@@ -1,0 +1,3 @@
+actions
+disablePlugins
+	self pluginManager disable

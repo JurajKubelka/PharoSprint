@@ -1,0 +1,3 @@
+actions
+activatePlugins
+	self pluginManager activate

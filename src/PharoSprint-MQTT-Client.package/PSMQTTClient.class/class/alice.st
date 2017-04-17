@@ -5,4 +5,5 @@ alice
 		user: MQTTChatUser alice;
 		fogbugz: FogBugzClient allCases;
 		chat: MQTTChat new;
+		disablePlugins;
 		yourself
