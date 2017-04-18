@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "PharoSprint-Plugins-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"server",
+		"plugin",
+		"serverRequests",
+		"port",
+		"dispatcher"
+	],
+	"name" : "PSDiscordWebhookPluginTest",
+	"type" : "normal"
+}

@@ -5,5 +5,6 @@ handleCaseStateUpdatedAnnouncement: aPSCaseStateUpdatedAnnouncement
 		url: self url;
 		message: (self messageFromAnnouncement: aPSCaseStateUpdatedAnnouncement);
 		username: 'Pharo Sprint App';
-		avatarUrl: 'https://github.com/JurajKubelka/PharoSprint/blob/master/assets/img/case-info.png';
+		avatarUrl: 'https://raw.githubusercontent.com/JurajKubelka/PharoSprint/master/assets/img/icon.png';
+		supressNetworkErrors;
 		post
