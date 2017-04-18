@@ -26,7 +26,7 @@ baseline: spec
 			package: #'PharoSprint-Tests' with: [
 				spec requires: #( #'PharoSprint-Core' #'PharoSprint-UI' ). ];
 			package: #'PharoSprint-Plugins-Core' with: [
-				spec requires: #( #'PharoSprint-Core' #'DiscordSt' ). ];
+				spec requires: #( #'PharoSprint-Core' #'DiscordSt' #'FogBugz' ). ];
 			package: #'PharoSprint-Plugins-Tests' with: [
 				spec requires: #( #'PharoSprint-Plugins-Core' #'PharoSprint-Tests' ). ];
 			package: #'PharoSprint-UI' with: [
@@ -34,7 +34,7 @@ baseline: spec
 			package: #'PharoSprint-MQTT-Client' with: [
 				spec requires: #( #'PharoSprint-Plugins-Core' #'MQTTChat' ). ];
 			package: #'PharoSprint-MQTT-Tests' with: [
-				spec requires: #( #'PharoSprint-MQTT-Client' #'PharoSprint-MQTT-UI' ). ];
+				spec requires: #( #'PharoSprint-MQTT-Client' #'PharoSprint-MQTT-UI' #'PharoSprint-Tests' ). ];
 			package: #'PharoSprint-MQTT-UI' with: [
 				spec requires: #( #'PharoSprint-MQTT-Client' #'PharoSprint-UI' ). ];
 			group: #'default' with: #( #'core' #'mqtt-client' #'tests' );

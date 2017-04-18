@@ -1,13 +1,11 @@
 {
-	"commentStamp" : "JurajKubelka 4/17/2017 17:00",
-	"super" : "Object",
+	"commentStamp" : "JurajKubelka 4/18/2017 16:07",
+	"super" : "PSPlugin",
 	"category" : "PharoSprint-Plugins-Core-PharoSprint-Plugins-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"client"
-	],
-	"name" : "PSPlugin",
+	"instvars" : [ ],
+	"name" : "PSFogBugzUserActivityPlugin",
 	"type" : "normal"
 }

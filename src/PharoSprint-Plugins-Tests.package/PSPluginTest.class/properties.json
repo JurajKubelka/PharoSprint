@@ -1,13 +1,13 @@
 {
-	"commentStamp" : "<historical>",
+	"commentStamp" : "JurajKubelka 4/18/2017 14:34",
 	"super" : "PSTestCase",
 	"category" : "PharoSprint-Plugins-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"manager"
+		"plugin"
 	],
-	"name" : "PSPluginManagerTest",
+	"name" : "PSPluginTest",
 	"type" : "normal"
 }

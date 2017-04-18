@@ -1,13 +1,12 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "TestCase",
+	"super" : "PSPluginTest",
 	"category" : "PharoSprint-Plugins-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"server",
-		"plugin",
 		"serverRequests",
 		"port",
 		"dispatcher"

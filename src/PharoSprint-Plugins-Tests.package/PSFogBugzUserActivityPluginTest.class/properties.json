@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "PSTestCase",
+	"super" : "PSPluginTest",
 	"category" : "PharoSprint-Plugins-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"manager"
+		"fogbugz"
 	],
-	"name" : "PSPluginManagerTest",
+	"name" : "PSFogBugzUserActivityPluginTest",
 	"type" : "normal"
 }

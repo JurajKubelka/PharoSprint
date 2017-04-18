@@ -2,10 +2,7 @@ tests
 testHandleCaseStateUpdatedAnnouncement
 	| announcement |
 	self startZnServer.
-	announcement := self newPSCaseStateUpdatedAnnouncement
-		case: self newCaseOne;
-		actualState: (self newTakenState user: (self newUser name: self username; yourself); yourself);
-		yourself.
+	announcement := self newFilledPSCaseStateUpdatedAnnouncement.
 	plugin := PSDiscordWebhookPlugin new
 		url: 'http://localhost:', port asString.
 	plugin handleCaseStateUpdatedAnnouncement: announcement.
