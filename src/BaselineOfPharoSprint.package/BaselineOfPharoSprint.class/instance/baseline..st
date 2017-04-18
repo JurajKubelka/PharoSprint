@@ -26,7 +26,7 @@ baseline: spec
 			package: #'PharoSprint-Tests' with: [
 				spec requires: #( #'PharoSprint-Core' #'PharoSprint-UI' ). ];
 			package: #'PharoSprint-Plugins-Core' with: [
-				spec requires: #( #'PharoSprint-Core' ). ];
+				spec requires: #( #'PharoSprint-Core' #'DiscordSt' ). ];
 			package: #'PharoSprint-Plugins-Tests' with: [
 				spec requires: #( #'PharoSprint-Plugins-Core' #'PharoSprint-Tests' ). ];
 			package: #'PharoSprint-UI' with: [
