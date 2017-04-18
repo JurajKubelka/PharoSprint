@@ -4,7 +4,7 @@ testHandleFogbugzCasesUpdatedAnnouncement2
 	fogbugz := FogBugzClient allCases.
 	client := self newClient fogbugz: fogbugz.
 	numberOfCases := client cases size.
-	case := self newCaseOne.
+	case := self newFogBugzCaseOne.
 	fogbugz cases updateCases: { case }.
 	self assert: client cases size equals: numberOfCases + 1.
 	self assert: (client cases anySatisfy: [ :eachCase | eachCase case = case ] ).

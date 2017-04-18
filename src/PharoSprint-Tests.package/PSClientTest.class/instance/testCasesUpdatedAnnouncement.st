@@ -4,9 +4,9 @@ testCasesUpdatedAnnouncement
 	announcements := OrderedCollection new.
 	client := self newClient user: self newUser; fogbugz: self newFogBugz; yourself.
 	client announcer when: Announcement do: [ :ann | announcements add: ann ].
-	case1 := self newCaseOne.
+	case1 := self newFogBugzCaseOne.
 	client fogbugz cases updateCases: { case1 }.
-	case2 := self newCaseOne.
+	case2 := self newFogBugzCaseOne.
 	case2 lastModification: case1 lastModification + 1 hour. 
 	client fogbugz cases updateCases: { case2 }.
 	self assert: announcements size equals: 2.

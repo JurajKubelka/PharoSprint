@@ -4,7 +4,7 @@ testHandleCaseUpdatedAnnouncement
 	announcements := OrderedCollection new.
 	client := self newClient user: self newUser; fogbugz: self newFogBugz; yourself.
 	client announcer when: Announcement do: [ :ann | announcements add: ann ].
-	case1 := self newCaseOne.
+	case1 := self newFogBugzCaseOne.
 	client fogbugz cases updateCases: { case1 }.
 	case2 := client cases first.
 	case2 state: (PSTakenCaseState user: client user).

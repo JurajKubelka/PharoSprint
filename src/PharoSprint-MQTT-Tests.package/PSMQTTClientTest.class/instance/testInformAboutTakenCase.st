@@ -4,7 +4,7 @@ testInformAboutTakenCase
 	alice := self newAlice.
 	pedro := self newPedro.
 	client := self newClient fogbugz: self newFogBugz; chat: chat; user: alice; yourself.
-	client fogbugz cases updateCases: { self newCaseOne }.
+	client fogbugz cases updateCases: { self newFogBugzCaseOne }.
 	self assert: client cases size equals: 1.
 	client cases first take: alice.
 	self assert: client cases first isTaken.
@@ -18,7 +18,7 @@ testInformAboutTakenCase
 	message := MQTTChatEncoderDecoder fromByteArray: results fourth.
 	self assert: message author equals: client user.
 	self assert: message contents class equals: PSChatCaseState.
-	self assert: message contents caseId equals: self newCaseOne id.
+	self assert: message contents caseId equals: self newFogBugzCaseOne id.
 	self assert: message contents stateId equals: PSTakenCaseState stateId.
 	self assert: message contents user equals: alice.
 	
