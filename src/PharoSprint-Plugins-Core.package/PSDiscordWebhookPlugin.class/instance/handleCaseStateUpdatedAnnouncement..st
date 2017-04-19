@@ -4,8 +4,9 @@ handleCaseStateUpdatedAnnouncement: aPSCaseStateUpdatedAnnouncement
 	self ifDifferentUser: aPSCaseStateUpdatedAnnouncement actualState user do: [ ^ self ].
 	DSWebhookClient new 
 		url: self url;
-		message: (self messageFromAnnouncement: aPSCaseStateUpdatedAnnouncement);
-		username: 'Pharo Sprint App';
+		username: 'Pharo Sprint';
 		avatarUrl: 'https://raw.githubusercontent.com/JurajKubelka/PharoSprint/master/assets/img/icon.png';
+		embedDescription: (self messageFromAnnouncement: aPSCaseStateUpdatedAnnouncement);
+		embedColor: aPSCaseStateUpdatedAnnouncement actualState discordColor;
 		supressNetworkErrors;
 		post

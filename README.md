@@ -29,15 +29,15 @@ As you can see below, you can also filter cases according to case title, state, 
 
 You can also browse case details in a new window. 
 
-![Main application window](assets/img/case-info.png)
+![Case info example](assets/img/case-info.png)
 
-![Main application window](assets/img/case-events.png)
+![Case events example](assets/img/case-events.png)
 
 ### Discord Integration
 
 Pharo Sprint Application is integrated with Discord and is able to inform about user activities (and case changes) in a particular Discord channel.
 
-![Main application window](assets/img/discord-integration.png)
+![Discord integration example](assets/img/discord-integration.png)
 
 ## Installation
 

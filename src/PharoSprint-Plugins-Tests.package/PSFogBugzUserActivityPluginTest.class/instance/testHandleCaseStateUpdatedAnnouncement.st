@@ -1,7 +1,7 @@
 tests
 testHandleCaseStateUpdatedAnnouncement
 	| announcement |
-	announcement := self newFilledPSCaseStateUpdatedAnnouncement.
+	announcement := self newTakenPSCaseStateUpdatedAnnouncement.
 	plugin := self newPlugin.
 	fogbugz := self newFogBugz.
 	plugin 

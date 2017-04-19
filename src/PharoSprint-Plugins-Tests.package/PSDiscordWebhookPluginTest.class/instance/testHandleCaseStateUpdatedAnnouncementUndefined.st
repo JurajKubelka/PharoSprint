@@ -1,14 +1,13 @@
 tests
-testHandleCaseStateUpdatedAnnouncementNetworkError
-	"Connection Timeout is ignored"
+testHandleCaseStateUpdatedAnnouncementUndefined
+	"Message should not be sent to Discord."
 	| announcement |
 	self startZnServer.
-	server stop.
-	announcement := self newTakenPSCaseStateUpdatedAnnouncement.
+	announcement := self newUndefinedPSCaseStateUpdatedAnnouncement.
 	plugin := self newPlugin
 		url: 'http://localhost:', port asString;
 		client: (self newClient user: announcement actualState user);
 		yourself.
-	self deny: (plugin isDifferentUser: announcement actualState user).
+	self assert: (plugin isDifferentUser: announcement actualState user).
 	plugin handleCaseStateUpdatedAnnouncement: announcement.
 	self assert: serverRequests size equals: 0.
