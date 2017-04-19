@@ -5,13 +5,8 @@ messageFromAnnouncement: aPSCaseStateUpdatedAnnouncement
 		actualState := aPSCaseStateUpdatedAnnouncement actualState.
 		stream 
 			<< actualState username
-			<< ' has **'
-			<< (self stateStringFromAnnouncement: aPSCaseStateUpdatedAnnouncement)
-			<< '** the case ['.
-		aPSCaseStateUpdatedAnnouncement case printOn: stream.
-		stream << ']('.
-		(PharoIssue number: aPSCaseStateUpdatedAnnouncement case id) trackerUrl printOn: stream.
+			<< ' has '.
+		self stateStringFromAnnouncement: aPSCaseStateUpdatedAnnouncement stream: stream.
 		stream 
-			<< '),' 
-			<< ' *using [Pharo Sprint App](' << self homepageUrl << ').*'
+			<< ', *using [Pharo Sprint App](' << self homepageUrl << ').*'
 		]

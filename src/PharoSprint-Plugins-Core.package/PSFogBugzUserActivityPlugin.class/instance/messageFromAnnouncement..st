@@ -6,7 +6,7 @@ messageFromAnnouncement: aPSCaseStateUpdatedAnnouncement
 		stream 
 			<< actualState username
 			<< ' has '
-			<< actualState stateId asString
-			<< ' the case.'
+			<< (self stateStringFromAnnouncement: aPSCaseStateUpdatedAnnouncement)
+			<< '.'
 			<< self hiddenString
 		]
