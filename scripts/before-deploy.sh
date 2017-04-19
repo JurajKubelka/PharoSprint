@@ -15,6 +15,9 @@ if [[ "$?" != 0 ]] ; then
     exit $ERR_BUILD
 fi
 
+mv ./scripts/build/*/*.zip ./scripts/build/
+ls -la ./scripts/build/*.zip
+
 # set version and commit id for the bintray configuration
 echo "---"
 echo "$TRAVIS_COMMIT_MESSAGE"
@@ -33,9 +36,9 @@ cat <<EOF | tee .bintray.json
         "desc": "Automatic build of the GitHub commit ${TRAVIS_COMMIT}.\n\nCommit message: ${ONELINE_COMMIT_MESSAGE}"
     },
     "files": [
-	{
-	    "includePattern": "scripts/build/60\\+vm/(PharoSprint.*\\.zip)",
-	    "uploadPattern": "\$1",
+        {
+	    "includePattern": "./scripts/build/(PharoSprint.*\\.zip)", 
+	    "uploadPattern": "\$1", 
 	    "matrixParams": { "override": 1 }
 	}
     ],
