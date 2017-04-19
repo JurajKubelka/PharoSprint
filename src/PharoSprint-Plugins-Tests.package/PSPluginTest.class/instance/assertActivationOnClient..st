@@ -1,0 +1,3 @@
+asserting
+assertActivationOnClient: aPSClient 
+	self subclassResponsibility

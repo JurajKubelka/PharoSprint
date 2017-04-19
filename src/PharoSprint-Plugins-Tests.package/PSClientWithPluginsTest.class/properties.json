@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "PSTestCase",
+	"super" : "PSClientTest",
 	"category" : "PharoSprint-Plugins-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],

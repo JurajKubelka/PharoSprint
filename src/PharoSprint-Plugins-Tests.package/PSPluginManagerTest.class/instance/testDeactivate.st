@@ -6,7 +6,9 @@ testDeactivate
 	manager plugins first 
 		activation: [ :client | results add: #activation; add: client ];
 		deactivation: [ :client | results add: #deactivation; add: client ].
-	manager deactivate.
-	self assert: results size equals: 2.
-	self assert: results first equals: #deactivation.
+	manager activate; deactivate.
+	self assert: results size equals: 4.
+	self assert: results first equals: #activation.
 	self assert: results second equals: self.
+	self assert: results third equals: #deactivation.
+	self assert: results fourth equals: self.

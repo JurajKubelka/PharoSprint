@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JurajKubelka 4/19/2017 05:59",
+	"super" : "Object",
+	"category" : "PharoSprint-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PSInspectorExtensions",
+	"type" : "normal"
+}

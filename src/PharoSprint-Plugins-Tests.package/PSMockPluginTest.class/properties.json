@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PSPluginTest",
+	"category" : "PharoSprint-Plugins-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"results"
+	],
+	"name" : "PSMockPluginTest",
+	"type" : "normal"
+}

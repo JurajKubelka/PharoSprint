@@ -1,0 +1,3 @@
+asserting
+denyActivationOnClient: aPSClient 
+	self subclassResponsibility

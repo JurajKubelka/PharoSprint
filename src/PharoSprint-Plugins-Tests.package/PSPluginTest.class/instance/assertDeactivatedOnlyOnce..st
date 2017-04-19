@@ -1,0 +1,3 @@
+asserting
+assertDeactivatedOnlyOnce: aPSClient 
+	self subclassResponsibility

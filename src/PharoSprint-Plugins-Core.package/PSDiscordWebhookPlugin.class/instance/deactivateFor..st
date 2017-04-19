@@ -1,4 +1,3 @@
-actions
+private
 deactivateFor: aPSClient 
-	self client: nil.
 	aPSClient announcer unsubscribe: self.

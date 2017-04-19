@@ -5,7 +5,7 @@ testHandleCaseStateUpdatedAnnouncementNetworkError
 	self startZnServer.
 	server stop.
 	announcement := self newFilledPSCaseStateUpdatedAnnouncement.
-	plugin := PSDiscordWebhookPlugin new
+	plugin := self newPlugin
 		url: 'http://localhost:', port asString;
 		client: (self newClient user: announcement actualState user);
 		yourself.

@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "JurajKubelka 3/23/2017 15:50",
-	"super" : "PSClientTest",
+	"super" : "PSClientWithPluginsTest",
 	"category" : "PharoSprint-MQTT-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
