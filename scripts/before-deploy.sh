@@ -3,7 +3,13 @@
 export ERR_BUILD=1
 
 # build image and change files and compress them into one ZIP file
-( cd scripts && ./build.sh -6cz -n PharoSprint )
+( cd scripts && ./build.sh -d 64/60+vm -cz -n PharoSprint )
+if [[ "$?" != 0 ]] ; then
+    echo "ERROR: unsuccessfull build" >&2
+    exit $ERR_BUILD
+fi
+
+( cd scripts && ./build.sh -d 60+vm -cz -n PharoSprint )
 if [[ "$?" != 0 ]] ; then
     echo "ERROR: unsuccessfull build" >&2
     exit $ERR_BUILD
@@ -28,7 +34,7 @@ cat <<EOF | tee .bintray.json
     },
     "files": [
         {
-	    "includePattern": "./scripts/build/(PharoSprint-.*\\.zip)", 
+	    "includePattern": "./scripts/build/.*/(PharoSprint.*\\.zip)", 
 	    "uploadPattern": "\$1", 
 	    "matrixParams": { "override": 1 }
 	}
