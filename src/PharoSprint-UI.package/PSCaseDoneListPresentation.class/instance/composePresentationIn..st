@@ -10,6 +10,11 @@ composePresentationIn: browser
 				list selection ifNotNil: [ :aCase | | aSprint |
 					aSprint := list entity.
 					aCase take: aSprint user ] ] 
+			entitled: 'Review case';
+		selectionAct: [ :list :sprint | 
+				list selection ifNotNil: [ :aCase | | aSprint |
+					aSprint := list entity.
+					aCase take: aSprint user ] ] 
 			entitled: 'Put back to taken';
 		selectionAct: [ :list :sprint | 
 				list selection ifNotNil: [ :aCase | | aSprint |
