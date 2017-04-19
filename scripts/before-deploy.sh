@@ -33,9 +33,14 @@ cat <<EOF | tee .bintray.json
         "desc": "Automatic build of the GitHub commit ${TRAVIS_COMMIT}.\n\nCommit message: ${ONELINE_COMMIT_MESSAGE}"
     },
     "files": [
-        {
-	    "includePattern": "./scripts/build(.*)*/(PharoSprint.*\\.zip)",
-	    "uploadPattern": "\$2",
+	{
+	    "includePattern": "./scripts/build/60\\+vm/(PharoSprint.*\\.zip)",
+	    "uploadPattern": "\$1",
+	    "matrixParams": { "override": 1 }
+	},
+	{
+	    "includePattern": "./scripts/build/64-60\\+vm/(PharoSprint.*\\.zip)",
+	    "uploadPattern": "\$1",
 	    "matrixParams": { "override": 1 }
 	}
     ],
