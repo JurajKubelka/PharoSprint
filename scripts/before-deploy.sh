@@ -3,11 +3,11 @@
 export ERR_BUILD=1
 
 # build image and change files and compress them into one ZIP file
-( cd scripts && ./build.sh -d 64/60+vm -cz -n PharoSprint )
-if [[ "$?" != 0 ]] ; then
-    echo "ERROR: unsuccessfull build" >&2
-    exit $ERR_BUILD
-fi
+# ( cd scripts && ./build.sh -d 64/60+vm -cz -n PharoSprint )
+# if [[ "$?" != 0 ]] ; then
+#     echo "ERROR: unsuccessfull build" >&2
+#     exit $ERR_BUILD
+# fi
 
 ( cd scripts && ./build.sh -d 60+vm -cz -n PharoSprint )
 if [[ "$?" != 0 ]] ; then
