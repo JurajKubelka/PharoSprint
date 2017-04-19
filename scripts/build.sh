@@ -15,9 +15,9 @@ if [[ -z "$REVISION" ]] ; then
     if [[ -n "$TRAVIS_BUILD_NUMBER" ]] ; then 
 	BUILD_NUMBER="-$TRAVIS_BUILD_NUMBER"
     else
-	BUILD_NUMBER="$(date -u +%S)"
+	BUILD_NUMBER="$(date -u +%H%M%S)"
     fi
-    REVISION="$(date -u +%Y%m%d%H%M)${BUILD_NUMBER}"
+    REVISION="$(date -u +%Y%m%d)${BUILD_NUMBER}"
     export REVISION
 fi
 
