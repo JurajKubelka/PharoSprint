@@ -10,8 +10,9 @@ composePresentationIn: browser
 						PSFogBugzInfoModel new fogbugz: client fogbugz; buildWithSpec ] ].
 			tabulator transmit to: #proposedAndAll; andShow: [ :composite | 
 				composite 
-					custom: (PSCaseProposedListPresentation new);
-					custom: (PSCaseAllListPresentation new) ].
+					custom: PSCaseProposedListPresentation new;
+					custom: PSCaseReviewListPresentation new;
+					custom: PSCaseAllListPresentation new ].
 			tabulator transmit to: #taken; andShow: [ :composite | 
 				composite custom: (PSCaseTakenListPresentation new) ].
 			tabulator transmit to: #done; andShow: [ :composite | 
