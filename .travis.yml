@@ -30,7 +30,6 @@ after_failure:
 
 before_deploy:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./scripts/before-deploy.sh ; fi
-  - ls ./scripts/build/*/*.zip
   
 deploy:
   provider: bintray
