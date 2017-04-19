@@ -6,7 +6,7 @@ install:
 
 os:
   - linux
-#  - osx
+  - osx
 
 smalltalk:
   - Pharo-6.0
