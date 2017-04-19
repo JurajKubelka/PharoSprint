@@ -34,7 +34,7 @@ cat <<EOF | tee .bintray.json
     },
     "files": [
 	{
-	    "includePattern": "./scripts/build/60\\+vm/(PharoSprint.*\\.zip)",
+	    "includePattern": "scripts/build/60\\+vm/(PharoSprint.*\\.zip)",
 	    "uploadPattern": "\$1",
 	    "matrixParams": { "override": 1 }
 	}
