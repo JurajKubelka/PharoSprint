@@ -4,7 +4,9 @@
 	"category" : "PharoSprint-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"DebugMode"
+	],
 	"instvars" : [
 		"user",
 		"fogbugz",

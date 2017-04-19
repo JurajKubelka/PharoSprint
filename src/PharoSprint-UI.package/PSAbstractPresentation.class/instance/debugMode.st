@@ -1,3 +1,3 @@
 testing
 debugMode
-	^ DebugMode ifNil: false
+	^ PSClient debugMode 
