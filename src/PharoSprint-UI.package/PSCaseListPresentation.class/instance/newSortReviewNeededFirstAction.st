@@ -4,9 +4,12 @@ newSortReviewNeededFirstAction
 	^ GLMGenericAction new
 		action: [ :list :sprint | 
 				list sortBlock: [ :a :b | 
-					(a isReviewNeeded not and: [ b isReviewNeeded not ]) 
+					(a isReviewNeeded and: [ b isReviewNeeded ]) 
 						ifTrue: [ a status < b status ]
-						ifFalse: [ a isReviewNeeded or: [ b isReviewNeeded not ] ] ].
+						ifFalse: [ 
+							(a isReviewNeeded not and: [ b isReviewNeeded not ]) 
+								ifTrue: [ a status < b status ]
+								ifFalse: [ a isReviewNeeded or: [ b isReviewNeeded not ] ] ] ].
 				list update ];
 		iconNamed: #glamorousUp;
 		title: 'Review needed cases first';
