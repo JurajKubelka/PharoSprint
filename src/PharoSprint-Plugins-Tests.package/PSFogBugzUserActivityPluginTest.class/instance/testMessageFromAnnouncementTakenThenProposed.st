@@ -5,4 +5,4 @@ testMessageFromAnnouncementTakenThenProposed
 	announcement previousState: self newFilledTakenState.
 	plugin := self newPlugin.
 	message := plugin messageFromAnnouncement: announcement.
-	self assert: message equals: 'user one has left the case in the proposed list. 			 	 	'.
+	self assert: message equals: 'user one has left the case in the proposed list, using Pharo Sprint App http://bit.ly/SprintWeb. 			 	 	'.

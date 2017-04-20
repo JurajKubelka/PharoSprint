@@ -5,4 +5,4 @@ testMessageFromAnnouncementDoneThenTaken
 	announcement previousState: self newFilledDoneState.
 	plugin := self newPlugin.
 	message := plugin messageFromAnnouncement: announcement.
-	self assert: message equals: 'user one has taken the case back. 			 	 	'.
+	self assert: message equals: 'user one has taken the case back, using Pharo Sprint App http://bit.ly/SprintWeb. 			 	 	'.

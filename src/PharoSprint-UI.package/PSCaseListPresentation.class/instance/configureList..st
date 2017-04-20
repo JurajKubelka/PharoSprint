@@ -9,5 +9,4 @@ configureList: aList
 		addSelectionAction: self inspectCaseAction;
 		addSelectionAction: self openCaseInFogBugzWebpageAction;
 		addSelectionAction: self discussCaseOnDiscordAction;
-		addSelectionAction: self discussCaseOnSlackAction;
 		yourself
