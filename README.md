@@ -1,8 +1,10 @@
 # PharoSprint
 
-Pharo Sprint Application to support coordination and collaboration during Bug Days a.k.a. Pharo Sprint Days.
+Pharo Sprint Application to support coordination and collaboration during Bug Days a.k.a. **Pharo Sprint Days**.
 
-Implemented in [Pharo](http://pharo.org). 
+[![](https://img.shields.io/badge/language-Smalltalk-blue.svg?style=flat)](https://en.wikipedia.org/wiki/Smalltalk)
+[![](https://img.shields.io/badge/platform-Pharo-blue.svg?style=flat)](http://pharo.org/)
+[![](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://opensource.org/licenses/MIT/)
 
 [![Build Status](https://travis-ci.org/JurajKubelka/PharoSprint.svg?branch=master)](https://travis-ci.org/JurajKubelka/PharoSprint)
 [![Build status](https://ci.appveyor.com/api/projects/status/8h36ia1y8a9j8kv1/branch/master?svg=true)](https://ci.appveyor.com/project/JurajKubelka/pharosprint/branch/master)
