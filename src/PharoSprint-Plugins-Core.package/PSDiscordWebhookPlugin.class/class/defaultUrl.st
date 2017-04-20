@@ -1,0 +1,3 @@
+defaults
+defaultUrl
+	^ self webhookUrl

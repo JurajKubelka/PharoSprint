@@ -1,3 +1,3 @@
 defaults
 defaultUrl
-	^ self webhookUrl
+	^ self class defaultUrl

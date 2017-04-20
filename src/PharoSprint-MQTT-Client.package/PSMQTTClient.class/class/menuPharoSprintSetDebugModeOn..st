@@ -9,4 +9,4 @@ menuPharoSprintSetDebugModeOn: aBuilder
 		icon: #glamorousBug asIcon;
 		parent: #Collaboration;
 		help: 'It exposes more actions that permits to debug the application';
-		action: [ self setDebugMode ]
+		action: [ self setDebugMode ].

@@ -1,3 +1,4 @@
 accessing
 plugins
-	^ plugins ifNil: [ plugins := self allAvailablePlugins ]
+	plugins ifNil: [ self plugins: self allAvailablePlugins ].
+	^ plugins

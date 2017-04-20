@@ -1,3 +1,3 @@
-as yet unclassified
+instance creation
 newPlugins
-	^ Array with: PSMockPlugin new
+	^ Array with: self newPlugin

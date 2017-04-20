@@ -1,4 +1,5 @@
 accessing
 allAvailableFor: aPSClient 
 	"Return all available plugins for aPSClient."
-	^ self allSubclasses select: [ :each | each isAvailableFor: aPSClient ]
+	^ self allSubclasses 
+		flatCollect: [ :eachClass | eachClass allAvailableInstancesFor: aPSClient ]
