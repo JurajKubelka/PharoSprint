@@ -6,21 +6,9 @@ composePresentationIn: browser
 			col ];
 		format: [ :aCase :aSprint | self threeLineRowFor: aCase sprint: aSprint ];
 		rowHeight: [ :presentation | presentation class defaultRowHeight * 3 ];
-		selectionAct: [ :list :sprint | 
-				list selection ifNotNil: [ :aCase | | aSprint |
-					aSprint := list entity.
-					aCase take: aSprint user ] ] 
-			entitled: 'Review case';
-		selectionAct: [ :list :sprint | 
-				list selection ifNotNil: [ :aCase | | aSprint |
-					aSprint := list entity.
-					aCase take: aSprint user ] ] 
-			entitled: 'Put back to taken';
-		selectionAct: [ :list :sprint | 
-				list selection ifNotNil: [ :aCase | | aSprint |
-					aSprint := list entity.
-					aCase renounce: aSprint user ] ] 
-			entitled: 'Put back to proposed';
+		addSelectionAction: self newReviewCaseAction;
+		addSelectionAction: self newPutCaseBackToTakenAction;
+		addSelectionAction: self newPutCaseBackToProposedAction;
 		with: [ :list | self configureList: list ];
 		dropOnItem: [ :draggedObject :targetItem :list | | aSprint |
 			aSprint := list entity.
