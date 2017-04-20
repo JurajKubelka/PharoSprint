@@ -4,7 +4,8 @@ addSortActions: aList
 	^ aList
 		addSelectionAction: self newSortNewCasesFirst;
 		addSelectionAction: self newSortOldCasesFirst;
-		addSelectionAction: self newSortRecentlyEditedCasesFirst;
+		addSelectionAction: self newSortInvolvedCasesFirstAction;
+		addSelectionAction: self newSortRecentlyEditedCasesFirstAction;
 		addSelectionAction: self newSortReviewNeededFirstAction;
 		addSelectionAction: self newSortByTitleAction;
 		yourself

@@ -1,5 +1,5 @@
 menu actions
-newSortRecentlyEditedCasesFirst
+newSortRecentlyEditedCasesFirstAction
 	^ GLMGenericAction new
 		action: [ :list :sprint | 
 				list sortBlock: [ :a :b | a lastModification > b lastModification ].
