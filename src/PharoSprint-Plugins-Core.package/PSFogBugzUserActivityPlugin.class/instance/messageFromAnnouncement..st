@@ -7,6 +7,6 @@ messageFromAnnouncement: aPSCaseStateUpdatedAnnouncement
 			<< actualState username
 			<< ' has '
 			<< (self stateStringFromAnnouncement: aPSCaseStateUpdatedAnnouncement)
-			<< ', using Pharo Sprint App http://bit.ly/SprintWeb.'
+			<< ', <i>using <a href="http://bit.ly/SprintWeb" title="Pharo Sprint Homepage">Pharo Sprint App</a></i>.'
 			<< self hiddenString
 		]

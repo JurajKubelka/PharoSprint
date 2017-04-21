@@ -4,4 +4,4 @@ stateStringFromAnnouncement: aPSCaseStateUpdatedAnnouncement
 	^ self stateStringDictionary
 		at: (aPSCaseStateUpdatedAnnouncement previousStateId asString, '_', 
 			aPSCaseStateUpdatedAnnouncement actualStateId asString)
-		ifAbsent: [ aPSCaseStateUpdatedAnnouncement actualStateId asString, ' the case' ]
+		ifAbsent: [ '<b>', aPSCaseStateUpdatedAnnouncement actualStateId asString, '</b> the case' ]

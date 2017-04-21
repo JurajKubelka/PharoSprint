@@ -35,11 +35,13 @@ You can also browse case details in a new window.
 
 ![Case events example](assets/img/case-events.png)
 
-### Discord Integration
+### Discord and FogBugz Integration
 
-Pharo Sprint Application is integrated with Discord and is able to inform about user activities (and case changes) in a particular Discord channel.
+Pharo Sprint Application is integrated with [Discord](http://discordapp.com) and [FogBugz](http://www.fogcreek.com/fogbugz/) and is able to inform about user activities (and case changes).
 
 ![Discord integration example](assets/img/discord-integration.png)
+
+![FogBugz integration example](assets/img/fogbugz-integration.png)
 
 ## Installation
 

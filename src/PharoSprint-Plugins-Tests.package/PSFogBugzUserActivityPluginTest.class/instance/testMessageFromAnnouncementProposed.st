@@ -4,4 +4,4 @@ testMessageFromAnnouncementProposed
 	announcement := self newProposedPSCaseStateUpdatedAnnouncement.
 	plugin := self newPlugin.
 	message := plugin messageFromAnnouncement: announcement.
-	self assert: message equals: 'user one has proposed the case, using Pharo Sprint App http://bit.ly/SprintWeb. 			 	 	'.
+	self assert: message equals: 'user one has <b>proposed</b> the case, <i>using <a href="http://bit.ly/SprintWeb" title="Pharo Sprint Homepage">Pharo Sprint App</a></i>. 			 	 	'.
