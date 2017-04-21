@@ -6,6 +6,7 @@ composePresentationIn: browser
 			col ];
 		format: [ :aCase :aSprint | self threeLineRowFor: aCase sprint: aSprint ];
 		rowHeight: [ :presentation | presentation class defaultRowHeight * 3 ];
+		addSelectionAction: self newMarkResolvedReviewNeededAction;
 		addSelectionAction: self newReviewCaseAction;
 		addSelectionAction: self newPutCaseBackToTakenAction;
 		addSelectionAction: self newPutCaseBackToProposedAction;

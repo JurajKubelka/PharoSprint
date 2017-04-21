@@ -6,8 +6,9 @@ composePresentationIn: browser
 			col ];
 		format: [ :aCase :aSprint | self threeLineRowFor: aCase sprint: aSprint ];
 		rowHeight: [ :presentation | presentation class defaultRowHeight * 3 ];
+		addSelectionAction: self newCommitChanges;
 		addSelectionAction: self newPutCaseBackToProposedAction;
-		addSelectionAction: (self newDoneCaseAction withSeparatorAfter; yourself);
+		addSelectionAction: self newDoneCaseAction;
 		with: [ :list | self configureList: list ];
 		dropOnItem: [ :draggedObject :targetItem :list | | aPSClient |
 			aPSClient := list entity.
