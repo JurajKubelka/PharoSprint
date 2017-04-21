@@ -47,7 +47,7 @@ Pharo Sprint Application is integrated with [Discord](http://discordapp.com) and
 
 You can download [the latest image from Bintray](https://bintray.com/jurajkubelka/PharoSprint/build/_latestVersion#files) or install it in the latest Pharo 6 image using:
 
-```
+```Smalltalk
 Metacello new
     baseline: #PharoSprint;
     repository: 'github://JurajKubelka/PharoSprint/src';
