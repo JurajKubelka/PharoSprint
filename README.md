@@ -57,9 +57,21 @@ Pharo Sprint Application is integrated with [Discord](http://discordapp.com) and
 
 The application does not change case states on FogBugz. In means, that developers have to *produce slices* (commit changes) and *resolve* cases independently on the Pharo Sprint App.
 
-## Installation
+## How To Use It
 
-You can download [the latest image from Bintray](https://bintray.com/jurajkubelka/PharoSprint/build/_latestVersion#files) or install it in the latest Pharo 6 image using:
+What to do during the Pharo Sprints?
+
+- Download [the latest image from Bintray](https://bintray.com/jurajkubelka/PharoSprint/build/_latestVersion#files)
+- Execute the image, using the corresponding VM for Pharo 6
+- Run the application from `World Menu` / `Communication` / `Pharo Sprint`
+- Login, using your FogBugz account, wait a bit (about 40 seconds), then you should see all open cases.
+- Choose one and have a happy programming :-)
+
+Everybody participating in the sprint should use the Pharo Sprint image.
+
+## Installation in a Fresh Pharo Image
+
+Install it in the latest Pharo 6 image using:
 
 ```Smalltalk
 Metacello new
