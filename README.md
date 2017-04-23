@@ -11,6 +11,15 @@ Pharo Sprint Application to support coordination and collaboration during Bug Da
 [![Coverage Status](https://coveralls.io/repos/github/JurajKubelka/PharoSprint/badge.svg?branch=master)](https://coveralls.io/github/JurajKubelka/PharoSprint?branch=master)
 [![Download](https://api.bintray.com/packages/jurajkubelka/PharoSprint/build/images/download.svg)](https://bintray.com/jurajkubelka/PharoSprint/build/_latestVersion#files)
 
+## Table Of Contents
+
+- [Introduction](#introduction)
+- [Pharo Sprint App Description](#pharo-sprint-app)
+- [Discord and FogBugz Integration](#discord-and-fogbugz-integration)
+- [How To Use It](#how-to-use-it)
+- [Installation](#installation-in-a-fresh-pharo-image)
+- [Contribution & Ideas](#contribution--ideas)
+
 ## Introduction
 
 Pharo community regularly organize a Pharo Sprint event. The **Pharo Sprint** is a regular (monthly) event when developers and users meet together to fix bugs. This usually takes place in a physical location but people are welcomed to participate from any place. This is a great opportunity for novices to get involved and learn from experts!
