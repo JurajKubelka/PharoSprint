@@ -11,7 +11,7 @@ composePresentationIn: browser
 			tabulator transmit to: #proposedAndAll; andShow: [ :composite | 
 				composite 
 					custom: PSCaseProposedListPresentation new;
-					custom: PSCaseReviewListPresentation new;
+					"custom: PSCaseReviewListPresentation new;"
 					custom: PSCaseAllListPresentation new ].
 			tabulator transmit to: #taken; andShow: [ :composite | 
 				composite custom: (PSCaseTakenListPresentation new) ].

@@ -1,8 +1,8 @@
 world menu
-menuPharoSprintSetDebugModeOn: aBuilder
+menuSetDebugModeOn: aBuilder
 	"Add a custom menu item to the world menu"
 	"self setDebugMode."
-	<worldMenu>
+	"<worldMenu>"
 	self debugMode ifTrue: [ ^ self ]. 
 	(aBuilder item: #'Set expert mode')
 		order: 110;

@@ -13,19 +13,31 @@ Pharo Sprint Application to support coordination and collaboration during Bug Da
 
 ## Introduction
 
-You can open the application from the World menu. Currently, there are two options:
-- simplified UI that displays only lists of all, proposed, taken, and done cases
-- detailed UI that displays the same lists and details for a selected case below
+Pharo community regularly organize a Pharo Sprint event. The **Pharo Sprint** is a regular (monthly) event when developers and users meet together to fix bugs. This usually takes place in a physical location but people are welcomed to participate from any place. This is a great opportunity for novices to get involved and learn from experts!
 
-### Simplified UI
+When developers meet in a physical location, they typically use a whiteboard with three columns like this:
 
-As you can see below, you can also filter cases according to case title, state, and participated users.
+![Whiteboard](assets/img/whiteboard.jpg)
+
+The **TODO** column is a list of *cases* (issues, bugs), that are proposed to solve during the event. This list is usually written by organizers, but anyone can fill it. The **TAKEN** column is a list of cases, that someone decided to take. Typically, a developer crosses (or deletes) the number from the *TODO* list and writes it down to the *TAKEN* list. Once the developer is done, he or she crosses the number and puts it to the **DONE** column. This is a great way to organize the event smoothly.
+
+As the Pharo community grows, Pharo Sprint events are organized at the same day in different places around the world. And this is the moment, when the *Pharo Sprint App* become handy. The *physical whiteboard* is moved to the internet and shared among the dislocated groups. Moreover, developers see who is working on what and contact him or her on Pharo's Discord server.
+
+## Pharo Sprint App
+
+You can open the application from the World menu. The application follows the structure that was successfully used on the physical whiteboard with three columns: proposed, taken, and done. In addition, it add the *all* column where all open cases are listened and can be sorted in various ways.
+
+First of all, you need to login to FogBugz, using your FogBugz account
+
+![Main application window](assets/img/login.png)
+
+Once, you are successfully authenticated, the application updates the list of open cases. Currently it takes about 40 seconds to receive and parse the FogBugz response. So be patient, you need to do it just once :-) Developers then can choose cases from *proposed* and *all* columns, using filters and sorting options.
 
 ![Main application window](assets/img/main-window.png)
 
-### Detailed UI
+The following figure shows other actions, that are available for each column.
 
-![Detailed application window](assets/img/detailed-window.png)
+![Context menus](assets/img/context-menus.png)
 
 ### Case Info and Details
 
@@ -43,6 +55,8 @@ Pharo Sprint Application is integrated with [Discord](http://discordapp.com) and
 
 ![FogBugz integration example](assets/img/fogbugz-integration.png)
 
+The application does not change case states on FogBugz. In means, that developers have to *produce slices* (commit changes) and *resolve* cases independently on the Pharo Sprint App.
+
 ## Installation
 
 You can download [the latest image from Bintray](https://bintray.com/jurajkubelka/PharoSprint/build/_latestVersion#files) or install it in the latest Pharo 6 image using:
@@ -54,6 +68,12 @@ Metacello new
     load.
 ```
 
+It is up to you if you use the Pharo Sprint App inside of the same image where you fix other cases. It may be worth having it in a separate image, especially if the bug kills the Pharo image.
+
 ## Contribution & Ideas
 
-If you have any idea how to improve this application, [open a new issue](https://github.com/JurajKubelka/PharoSprint/issues/new) or clone this repositry and make the contribution :-)
+The Pharo Sprint App provides two buttons in order to provide a valuable feedback.
+
+![Feedback](assets/img/feedback.png)
+
+The first button is a form where you can express what you like, what you do not like about the current application and provide any idea how to improve it or how to organize Pharo Sprint events better. The second button is a link to the application's [issue tracker](https://github.com/JurajKubelka/PharoSprint/issues). And you are welcome to clone this repository and make the contribution too :-)

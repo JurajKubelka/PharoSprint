@@ -15,8 +15,3 @@ menuPharoSprintDebugModeOn: aBuilder
 		parent: #Collaboration;
 		help: 'Open Pharo Sprint only with one active plugin';
 		action: [ self openPublicWithTestingDiscordChannelOnly ].
-	(aBuilder item: #'Unset expert mode')
-		order: 200;
-		icon: #glamorousBug asIcon;
-		parent: #Collaboration;
-		action: [ self unsetDebugMode ].

@@ -3,7 +3,7 @@ configurePresentation: browser
 	browser 
 		title: [ :sprint | (sprint 
 			ifNotNil: [ :s | s username asString ]
-			ifNil: [ '<annonymous>' ]), '''s Pharo Sprint Dashboard' ];
+			ifNil: [ '<annonymous>' ]), '''s Pharo Sprint App' ];
 		addAction: self openHelpBrowserAction;
 		addAction: self openSendUsFeedbackAction;
 		addAction: self openIssueTrackerAction;
