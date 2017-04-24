@@ -7,7 +7,7 @@ export ERR_NOSERVER=4
 export ERR_ZIP_LS=5
 export ERR_ZIP_COMPRESS=6
 export WORKING_DIR=build
-export HOME_DIR="$PWD"
+export SCRIPT_DIR="$PWD"
 
 ### Define revision number ###
 
@@ -34,17 +34,19 @@ export BRANCH
 
 
 function help {
-    echo "USAGE: $0 <arguments> [server name]"
-    echo "       -d  <pharo name> download Pharo 6.0 (image, changes, VM)"
-    echo "           it is used as `get.pharo.org/<pharo name>`"
-    echo "       -n  <image name> to configure, compress, and/or run"
-    echo "           it is used as `configuration-<image name>.st`"
-    echo "       -c  configure [image name] image"
-    echo "       -z  compress [image name] image as ZIP"
-    echo "       -r  run the [image name] image"
-    echo " <pharo name> can be:"
+    echo "USAGE: $0 <arguments> <Pharo VM name> <Pharo image name>"
+    echo "           <Pharo VM name> is the Pharo 6.0 (image, changes, VM)"
+    echo "           it is used as 'get.pharo.org/<pharo name>'"
+    echo "           <Pharo image name> to configure, compress, and/or run"
+    echo "           it is used as 'configuration-<image name>.st'"
+    echo "       -d  download <Pharo VM name> (image, changes, VM)"
+    echo "           it is used as 'get.pharo.org/<pharo name>'"
+    echo "       -c  configure <Pharo image name> image"
+    echo "       -z  compress <Pharo image name> image as ZIP"
+    echo "       -r  run the <Pharo image name> image"
+    echo " <Pharo VM name> can be:"
     echo "       60+vm, 64/60+vm, etc"
-    echo " <image name> can be:"
+    echo " <Pharo image name> can be:"
     echo "       PharoSprint          Pharo Sprint Client"
     echo "       PharoSprintServer    Pharo Sprint Server"
     echo ""
@@ -99,12 +101,12 @@ function runPharoScript {
 
 function prepareScript {
     # $1 <image name>
-    sed -e 's/$REVISION\$/'"$REVISION"'/' -e  's/$BRANCH\$/'"$BRANCH"'/' "$HOME_DIR/configuration-${1}.st" > "./configuration-${1}.st"
+    sed -e 's/$REVISION\$/'"$REVISION"'/' -e  's/$BRANCH\$/'"$BRANCH"'/' "$SCRIPT_DIR/configuration-${1}.st" > "./configuration-${1}.st"
 }
     
 function configure {
     # $1 <image name>
-    if [ ! -r "$HOME_DIR/configuration-${1}.st" ] ; then
+    if [ ! -r "$SCRIPT_DIR/configuration-${1}.st" ] ; then
 	echo "Configuration file does not exists." >&2
 	exit $ERR_MISSING_FILE
     fi
@@ -125,11 +127,11 @@ function compressImage {
 
 function run {
     # $1 <server-name>
-    runPharoScript "${1}.image" "../run-${1}.st"
+    runPharoScript "${1}.image" "$SCRIPT_DIR/run-${1}.st"
 }
 
 # Parse allowed parameters
-args=$(getopt d:crhzn: $*)
+args=$(getopt dcrhz $*)
 
 if [ $? != 0 ] ; then
     help
@@ -143,9 +145,8 @@ do
     case "$param"
     in
 	-d)
-	    ARG_VERSION="$2"
+	    ARG_DOWNLOAD=true
 	    ARG_OK=true
-	    shift
 	    shift
 	    ;;
 	-r)
@@ -167,11 +168,6 @@ do
 	    ARG_HELP=true
 	    shift
 	    ;;
-	-n)
-	    ARG_SERVER="$2"
-	    shift
-	    shift
-	    ;;
 	--)
 	    shift
 	    break
@@ -184,45 +180,50 @@ if [ "$ARG_HELP" ] ; then
     exit 0
 fi
 
+# Check we have <Pharo VM name> and <Pharo image name> arguments
+if [ "$#" != 2 ] ; then
+    echo "You have to decide what Pharo VM and Pharo image to use." >&2
+    help
+    exit $ERR_NOARGS
+fi
+
+# Set Pharo VM and Pharo Image
+ARG_VM="$1"
+ARG_IMAGE="$2"
+
 if [ ! "$ARG_OK" ] ; then
     echo "You should decide what to do." >&2
     help
     exit $ERR_NOARGS
 fi
 
-if [ \( -n "$ARG_CONFIGURE" -o -n "$ARG_RUN" \) -a -z "$ARG_SERVER" ] ; then
-    echo "You have to decide what image to configure or run. Use parameter -n." >&2
-    help
-    exit $ERR_NOSERVER
-fi
-
-WORKING_DIR="${WORKING_DIR}/${ARG_VERSION/\//-}"
+WORKING_DIR="${WORKING_DIR}/${ARG_VM/\//-}"
 ensureWorkingDirectory
 
-if [ "$ARG_VERSION" ] ; then
+if [ "$ARG_DOWNLOAD" ] ; then
     echo
-    echo "### Download Pharo Image and VM of version '$ARG_VERSION' ###"
+    echo "### Download Pharo Image and VM of version '$ARG_VM' ###"
     echo
-    downloadPharoImageAndVM "$ARG_VERSION"
+    downloadPharoImageAndVM "$ARG_VM"
 fi
 
 if [ "$ARG_CONFIGURE" ] ; then
     echo
-    echo "### Configure "$ARG_SERVER" Image ###"
+    echo "### Configure "$ARG_IMAGE" Image ###"
     echo
-    configure "$ARG_SERVER"
+    configure "$ARG_IMAGE"
 fi
 
 if [ "$ARG_ZIP" ] ; then
     echo
-    echo "### Compress "$ARG_SERVER" Image ###"
+    echo "### Compress "$ARG_IMAGE" Image ###"
     echo
-    compressImage "$ARG_SERVER"
+    compressImage "$ARG_IMAGE"
 fi
 
 if [ "$ARG_RUN" ] ; then
     echo
-    echo "### Run "$ARG_SERVER" Image ###"
+    echo "### Run "$ARG_IMAGE" Image ###"
     echo
-    run "$ARG_SERVER"
+    run "$ARG_IMAGE"
 fi

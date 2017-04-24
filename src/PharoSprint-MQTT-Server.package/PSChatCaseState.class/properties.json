@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "MQTTChatMessageContents",
-	"category" : "PharoSprint-MQTT-Client",
+	"category" : "PharoSprint-MQTT-Server",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

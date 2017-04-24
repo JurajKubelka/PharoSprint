@@ -9,13 +9,13 @@ export ERR_BUILD=1
 #     exit $ERR_BUILD
 # fi
 
-( cd scripts && ./build.sh -d 60+vm -cz -n PharoSprint )
+( cd scripts && ./build.sh -dcz 60+vm PharoSprint )
 if [[ "$?" != 0 ]] ; then
     echo "ERROR: unsuccessfull 32bit build" >&2
     exit $ERR_BUILD
 fi
 
-( cd scripts && ./build.sh -d 64/60+vm -cz -n PharoSprint )
+( cd scripts && ./build.sh -dcz 64/60+vm PharoSprint )
 if [[ "$?" != 0 ]] ; then
     echo "ERROR: unsuccessfull 64bit build" >&2
     exit $ERR_BUILD
