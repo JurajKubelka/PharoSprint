@@ -1,4 +1,4 @@
-defaults
-roomId
+*PharoSprint-MQTT-Server
+pharoSprintRoomId
 	"Pharo Sprint room id where all communication happens."
-	^ MQTTChat pharoSprintRoomId 
+	^ #sprint

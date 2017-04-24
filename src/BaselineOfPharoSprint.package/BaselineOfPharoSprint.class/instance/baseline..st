@@ -32,13 +32,16 @@ baseline: spec
 			package: #'PharoSprint-UI' with: [
 				spec requires: #( #'PharoSprint-Core' #'WebBrowser' ). ];
 			package: #'PharoSprint-MQTT-Client' with: [
-				spec requires: #( #'PharoSprint-Plugins-Core' #'MQTTChat' ). ];
+				spec requires: #( #'PharoSprint-Plugins-Core' #'MQTTChat' #'PharoSprint-MQTT-Server' ). ];
 			package: #'PharoSprint-MQTT-Tests' with: [
 				spec requires: #( #'PharoSprint-MQTT-Client' #'PharoSprint-MQTT-UI' #'PharoSprint-Tests' ). ];
 			package: #'PharoSprint-MQTT-UI' with: [
 				spec requires: #( #'PharoSprint-MQTT-Client' #'PharoSprint-UI' ). ];
+			package: #'PharoSprint-MQTT-Server' with: [
+				spec requires: #( #'MQTTChat'  ). ];
 			group: #'default' with: #( #'core' #'mqtt-client' #'tests' );
 			group: #'core' with: #( #'PharoSprint-Core' #'PharoSprint-UI' #'PharoSprint-Plugins-Core' );
 			group: #'mqtt-client' with: #( #'PharoSprint-MQTT-Client' #'PharoSprint-MQTT-UI' );
+			group: #'mqtt-server' with: #( #'PharoSprint-MQTT-Server' );
 			group: #'tests' with: #( #'PharoSprint-Tests' #'PharoSprint-Plugins-Tests' #'PharoSprint-MQTT-Tests' ).
 	].

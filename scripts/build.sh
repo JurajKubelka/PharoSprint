@@ -45,7 +45,8 @@ function help {
     echo " <pharo name> can be:"
     echo "       60+vm, 64/60+vm, etc"
     echo " <image name> can be:"
-    echo "       PharoSprint    Pharo Sprint Client"
+    echo "       PharoSprint          Pharo Sprint Client"
+    echo "       PharoSprintServer    Pharo Sprint Server"
     echo ""
 }
 
@@ -124,7 +125,7 @@ function compressImage {
 
 function run {
     # $1 <server-name>
-    runPharoScript "${1}Server.image" "../run-${1}.st"
+    runPharoScript "${1}.image" "../run-${1}.st"
 }
 
 # Parse allowed parameters

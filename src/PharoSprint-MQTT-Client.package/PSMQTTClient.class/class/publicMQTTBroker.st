@@ -1,3 +1,3 @@
 defaults
 publicMQTTBroker
-	^ 'gc.dcc.uchile.cl'
+	^ MQTTChat pharoSprintPublicMQTTBroker
