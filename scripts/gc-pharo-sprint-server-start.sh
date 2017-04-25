@@ -12,6 +12,6 @@ CMD="./build.sh"
 
 cd "$WORKDIR" || exit 2
 
-LOG="pharo-sprint-server.log"
+LOG="/home/jkubelka/logs/pharo-sprint-server.log"
 
 $CMD -r 60+vm PharoSprintServer >> "$LOG" 2>&1
