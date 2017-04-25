@@ -1,15 +1,14 @@
 {
-	"commentStamp" : "JurajKubelka 4/25/2017 13:26",
+	"commentStamp" : "JurajKubelka 4/25/2017 13:22",
 	"super" : "ComposableModel",
 	"category" : "PharoSprint-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"infoModel",
-		"logoutButton",
-		"updateButton"
+		"messageModel",
+		"buttonModel"
 	],
-	"name" : "PSFogBugzLoggedModel",
+	"name" : "PSFogBugzMessageModel",
 	"type" : "normal"
 }

@@ -1,4 +1,6 @@
 announcement handling
 handleFogBugzNotLoggedAnnouncement: aFogBugzNotLoggedAnnouncement 
-	loginModel info: self labelNotLogged.
-	self updateDynamicModelWith: loginModel.
+	messageModel 
+		info: self labelNotLogged;
+		acceptBlock: [ self updateDynamicModelWith: loginModel ].
+	 self updateDynamicModelWith: messageModel 

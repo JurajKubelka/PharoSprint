@@ -8,5 +8,4 @@ initializeWidgets
 	passwordLabel label: 'Password:'; yourself.
 	passwordField := self newTextInput.
 	passwordField beEncrypted; autoAccept: true; ghostText: '******'.
-	infoLabel := self newLabel.
 	self focusOrder add: usernameField; add: passwordField

@@ -7,5 +7,7 @@ handleFogBugzLoginFailedAnnouncement: aFogBugzLoginFailedAnnouncement
 				<< 'Login Failed: '
 				<< aFogBugzLoginFailedAnnouncement exceptionMessage
 		] ].
-	loginModel info: message.
-	self updateDynamicModelWith: loginModel.
+	messageModel 
+		info: message;
+		acceptBlock: [ self updateDynamicModelWith: loginModel ].
+	self updateDynamicModelWith: messageModel.

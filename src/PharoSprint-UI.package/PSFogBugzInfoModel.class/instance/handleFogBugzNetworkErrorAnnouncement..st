@@ -7,5 +7,7 @@ handleFogBugzNetworkErrorAnnouncement: aFogBugzNetworkErrorAnnouncement
 			aFogBugzNetworkErrorAnnouncement exception printOn: stream.
 		] ].
 	model := self chooseDynamicModel.
-	model info: message.
-	self updateDynamicModelWith: model.
+	messageModel
+		info: message;
+		acceptBlock: [ self updateDynamicModelWith: model ].
+	self updateDynamicModelWith: messageModel.

@@ -1,0 +1,3 @@
+accessing - spec
+buttonModel
+	^ buttonModel

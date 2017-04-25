@@ -5,7 +5,7 @@ defaultSpec
 		newColumn: [ :column | column
 			newRow: [ :row |
 				row 
-					add: #infoLabel;
+					newColumn: [ :emptyColumn | emptyColumn ];
 					add: #usernameLabel width: self labelTextWidth; 
 					add: #usernameField width: self inputTextWidth;
 					add: #passwordLabel width: self labelTextWidth; 

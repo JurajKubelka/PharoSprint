@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "JurajKubelka 4/25/2017 13:31",
 	"super" : "ComposableModel",
 	"category" : "PharoSprint-UI",
 	"classinstvars" : [ ],
@@ -10,7 +10,8 @@
 		"dynamicModel",
 		"loginModel",
 		"labelModel",
-		"loggedModel"
+		"loggedModel",
+		"messageModel"
 	],
 	"name" : "PSFogBugzInfoModel",
 	"type" : "normal"

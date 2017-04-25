@@ -1,4 +1,3 @@
 announcement handling
 handleFogBugzLoggedInAnnouncement: aFogBugzLoggedInAnnouncement
-	loggedModel info: self emptyLabel.
 	self updateDynamicModelWith: loggedModel
