@@ -1,5 +1,4 @@
 language: smalltalk
-# sudo: true
 
 install:
   - pip install --user benchupload
