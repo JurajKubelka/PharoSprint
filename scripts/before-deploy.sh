@@ -29,11 +29,20 @@ echo "---"
 echo "$TRAVIS_COMMIT_MESSAGE"
 ONELINE_COMMIT_MESSAGE="$(echo "$TRAVIS_COMMIT_MESSAGE" | sed -e 's/"/\\"/g' -e :a -e N -e '$!ba' -e 's/\n/\\n/g' | tr '\n\r' '..')"
 echo "---"
+
+# set package name
+
+if [[ -z "$TRAVIS_TAG" ]] ; then
+    PACKAGE_NAME=build
+else
+    PACKAGE_NAME=release
+fi
+
 # create bintray configuration
 cat <<EOF | tee .bintray.json
 {
     "package": {
-        "name": "build",
+        "name": "${PACKAGE_NAME}",
         "repo": "PharoSprint",
 	"subject": "jurajkubelka"
     },

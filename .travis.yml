@@ -12,7 +12,7 @@ smalltalk:
   - Pharo-6.0
 
 env:
-  - REVISION="$(date -u +%Y%m%d)-$TRAVIS_BUILD_NUMBER"
+  - REVISION="$(if [[ -z "${TRAVIS_TAG}" ]] ; then date -u +%Y%m%d)-${TRAVIS_BUILD_NUMBER} ; else ${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER} ; fi"
 
 # before_install:
 #   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update ; fi
@@ -32,12 +32,21 @@ before_deploy:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./scripts/before-deploy.sh ; fi
   
 deploy:
-  provider: bintray
-  skip_cleanup: true
-  file: .bintray.json
-  user: $BINTRAY_USER
-  key: $BINTRAY_API_KEY
-  on: 
-    branch: master
-    repo: JurajKubelka/PharoSprint
-    condition:  "$TRAVIS_OS_NAME = linux"
+  - provider: bintray
+    skip_cleanup: true
+    file: .bintray.json
+    user: $BINTRAY_USER
+    key: $BINTRAY_API_KEY
+    on: 
+      branch: master
+      repo: JurajKubelka/PharoSprint
+      condition:  "$TRAVIS_OS_NAME = linux"
+  - provider: bintray
+    skip_cleanup: true
+    file: .bintray.json
+    user: $BINTRAY_USER
+    key: $BINTRAY_API_KEY
+    on: 
+      tags: true
+      repo: JurajKubelka/PharoSprint
+      condition:  "$TRAVIS_OS_NAME = linux"
