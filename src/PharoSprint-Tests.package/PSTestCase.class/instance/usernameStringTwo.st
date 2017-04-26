@@ -1,3 +1,3 @@
 defaults
-usernameTwo
+usernameStringTwo
 	^ 'user two'
