@@ -9,4 +9,4 @@ handleCaseStateUpdatedAnnouncement: aPSCaseStateUpdatedAnnouncement
 		embedDescription: (self messageFromAnnouncement: aPSCaseStateUpdatedAnnouncement);
 		embedColor: aPSCaseStateUpdatedAnnouncement actualState discordColor;
 		supressNetworkErrors;
-		post
+		asyncPost
