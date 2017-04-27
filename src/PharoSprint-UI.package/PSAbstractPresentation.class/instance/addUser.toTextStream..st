@@ -1,4 +1,4 @@
-as yet unclassified
+helpers
 addUser: aFogBugzUser toTextStream: aTextStream
 	"Add username that opens a webpage on click action"
 	aTextStream
