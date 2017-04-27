@@ -4,7 +4,7 @@ Pharo Sprint Application to support coordination and collaboration during Bug Da
 
 [![](https://img.shields.io/badge/language-Smalltalk-blue.svg?style=flat)](https://en.wikipedia.org/wiki/Smalltalk)
 [![](https://img.shields.io/badge/platform-Pharo-blue.svg?style=flat)](http://pharo.org/)
-[![](https://img.shields.io/badge/pharo%20version-6.0-blue.svg?style=flat)](http://pharo.org/)
+[![](https://img.shields.io/badge/pharo%20version-6.0-blue.svg?style=flat)](http://get.pharo.org)
 [![](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://opensource.org/licenses/MIT/)
 
 [![Build Status](https://travis-ci.org/JurajKubelka/PharoSprint.svg?branch=master)](https://travis-ci.org/JurajKubelka/PharoSprint)
