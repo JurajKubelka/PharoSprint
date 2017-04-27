@@ -10,6 +10,7 @@ testHandleCaseStateUpdatedAnnouncementDoneThenProposed2
 		yourself.
 	self deny: (plugin isDifferentUser: announcement actualState user).
 	plugin handleCaseStateUpdatedAnnouncement: announcement.
+	self assertSemaphore: 1.
 	self assert: serverRequests size equals: 1.
 	self 
 		assert: serverRequests first contents 
