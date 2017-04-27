@@ -1,3 +1,3 @@
 public
 openHelpBrowser
-	self inform: 'Comming soon :-)'
+	self openWebBrowserOn: self homepageUrl
