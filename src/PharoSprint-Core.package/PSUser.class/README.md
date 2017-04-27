@@ -1,0 +1,1 @@
+I represent a user, that use PSClient application. I am also assigned to PSCaseState objects.
