@@ -11,9 +11,10 @@ Pharo Sprint Application to support coordination and collaboration during Bug Da
 [![Test Status](https://api.bob-bench.org/v1/badgeByUrl?branch=master&hosting=github&ci=travis-ci&repo=JurajKubelka%2FPharoSprint)](https://bob-bench.org/r/gh/JurajKubelka/PharoSprint)
 [![Coverage Status](https://coveralls.io/repos/github/JurajKubelka/PharoSprint/badge.svg?branch=master)](https://coveralls.io/github/JurajKubelka/PharoSprint?branch=master)
 
-Stable: [![Download](https://api.bintray.com/packages/jurajkubelka/PharoSprint/release/images/download.svg)](https://bintray.com/jurajkubelka/PharoSprint/release/_latestVersion#files)
-
-Development: [![Download](https://api.bintray.com/packages/jurajkubelka/PharoSprint/build/images/download.svg)](https://bintray.com/jurajkubelka/PharoSprint/build/_latestVersion#files)
+![Stable](https://img.shields.io/badge/release-stable-green.svg?style=flat)
+[![Download](https://api.bintray.com/packages/jurajkubelka/PharoSprint/release/images/download.svg)](https://bintray.com/jurajkubelka/PharoSprint/release/_latestVersion#files)
+![Development](https://img.shields.io/badge/release-development-blue.svg?style=flat)
+[![Download](https://api.bintray.com/packages/jurajkubelka/PharoSprint/build/images/download.svg)](https://bintray.com/jurajkubelka/PharoSprint/build/_latestVersion#files)
 
 ## Table Of Contents
 
