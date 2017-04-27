@@ -1,5 +1,5 @@
 menu actions
-discussCaseOnDiscordAction
+newDiscussCaseOnDiscordAction
 	^ GLMGenericAction new
 		action: [ :list :sprint | 
 				list selection ifNotNil: [ :aCase | self openDiscordOnCase: aCase ] ];

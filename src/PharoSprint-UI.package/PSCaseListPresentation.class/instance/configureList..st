@@ -6,7 +6,8 @@ configureList: aList
 		enableFilter: [ :case :pattern | self case: case match: pattern ];
 		allowItemDrag: [ :item :list | true ];
 		allowDropOnItem: [ :draggedObject :targetItem :list | true ];
-		addSelectionAction: self inspectCaseAction;
+		addSelectionAction: self newInspectCaseAction;
+		addSelectionAction: self newCopyCaseIdToClipboardAction;
 		addSelectionAction: self openCaseInFogBugzWebpageAction;
-		addSelectionAction: self discussCaseOnDiscordAction;
+		addSelectionAction: self newDiscussCaseOnDiscordAction;
 		yourself

@@ -1,5 +1,5 @@
 menu actions
-inspectCaseAction
+newInspectCaseAction
 	^ GLMGenericAction new
 		action: [ :list :sprint | 
 				list selection ifNotNil: [ :aCase | aCase inspect ] ];
