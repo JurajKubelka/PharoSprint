@@ -8,6 +8,6 @@ configureList: aList
 		allowDropOnItem: [ :draggedObject :targetItem :list | true ];
 		addSelectionAction: self newInspectCaseAction;
 		addSelectionAction: self newCopyCaseIdToClipboardAction;
-		addSelectionAction: self openCaseInFogBugzWebpageAction;
+		addSelectionAction: self newOpenCaseInFogBugzWebpageAction;
 		addSelectionAction: self newDiscussCaseOnDiscordAction;
 		yourself

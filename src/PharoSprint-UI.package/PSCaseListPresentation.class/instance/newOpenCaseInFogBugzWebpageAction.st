@@ -1,5 +1,5 @@
 menu actions
-openCaseInFogBugzWebpageAction
+newOpenCaseInFogBugzWebpageAction
 	^ GLMGenericAction new
 		action: [ :list :sprint | 
 				list selection ifNotNil: [ :aCase | self openWebBrowserOnCase: aCase ] ];

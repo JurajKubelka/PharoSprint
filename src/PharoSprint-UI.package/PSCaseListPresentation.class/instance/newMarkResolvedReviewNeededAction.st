@@ -1,4 +1,4 @@
 menu actions
 newMarkResolvedReviewNeededAction
-	^ self openCaseInFogBugzWebpageAction
+	^ self newOpenCaseInFogBugzWebpageAction
 			title: 'Set as Done (Resolved) on FogBugz page'

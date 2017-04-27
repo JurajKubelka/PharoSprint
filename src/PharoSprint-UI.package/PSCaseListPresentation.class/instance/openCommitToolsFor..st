@@ -1,4 +1,6 @@
 actions
 openCommitToolsFor: aPSCase 
-	self openMonticelloBrowser.
-	self openSliceMakerFor: aPSCase.
+	| monticello |
+	self copyCaseIdToClipboard: aPSCase.
+	monticello := Smalltalk tools monticelloBrowser new.
+	monticello show; addSlice.
