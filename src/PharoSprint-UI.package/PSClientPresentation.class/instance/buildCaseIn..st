@@ -2,5 +2,6 @@ private - building
 buildCaseIn: composite
 	"You can overwrite it"
 	^ composite text
-		display: [ :case | case title ];
+		display: [ :case | self detailedCaseTextFor: case ];
+		format: #asText;
 		yourself
