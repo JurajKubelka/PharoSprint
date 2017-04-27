@@ -4,9 +4,9 @@ Release Comments
 
 - Release date: Apr 27, 2017
 
-![Main Window](/JurajKubelka/PharoSprint/raw/2ec35ce7f30c8f747965ed84fc109652c97bd94e/assets/img/main-window.png)
+![Main Window](https://github.com/JurajKubelka/PharoSprint/raw/2ec35ce7f30c8f747965ed84fc109652c97bd94e/assets/img/main-window.png)
 
-![Context Menus](/JurajKubelka/PharoSprint/raw/2ec35ce7f30c8f747965ed84fc109652c97bd94e/assets/img/context-menus.png)
+![Context Menus](https://github.com/JurajKubelka/PharoSprint/raw/2ec35ce7f30c8f747965ed84fc109652c97bd94e/assets/img/context-menus.png)
 
 For other screenshots and details check [README.md](https://github.com/JurajKubelka/PharoSprint/blob/763e26e5a796c4bc657827be809d638f85a09051/README.md).
 
@@ -14,11 +14,11 @@ The tool was announced publicly in [pharo-users](http://forum.world.st/Ann-Pharo
 
 The [Contributing to Pharo](http://pharo.org/contribute-events) is updated and the application is mentioned here. Thanks to Marcus Denker for the effort!
 
-Right after the announcement, several ideas and issues were posted, see [the list](/JurajKubelka/PharoSprint/issues?utf8=✓&q=is%3Aissue%20created%3A2017-04-23..2017-04-27)
+Right after the announcement, several ideas and issues were posted, see [the list](https://github.com/JurajKubelka/PharoSprint/issues?utf8=✓&q=is%3Aissue%20created%3A2017-04-23..2017-04-27)
 
 ### Summary of Changes
 
-Closed issues are visible in the corresponding milestone [0.2.0](/JurajKubelka/PharoSprint/milestone/1?closed=1)
+Closed issues are visible in the corresponding milestone [0.2.0](https://github.com/JurajKubelka/PharoSprint/milestone/1?closed=1)
 
 #### Simplified Main Window
 
@@ -51,7 +51,7 @@ It displays all, proposed, taken, and done cases. Each one is possible to select
 
 ### Feedback
 
-Users submitted the following issues: #1, #2, #3, #4, #5, #6 (see [the list](/JurajKubelka/PharoSprint/issues?utf8=✓&q=is%3Aissue%20created%3A%3C2017-04-02%20), and the following comments:
+Users submitted the following issues: #1, #2, #3, #4, #5, #6 (see [the list](https://github.com/JurajKubelka/PharoSprint/issues?utf8=✓&q=is%3Aissue%20created%3A%3C2017-04-02%20), and the following comments:
 
 #### What do you like about the current Pharo Sprint Application?
 
