@@ -8,7 +8,8 @@ os:
   - osx
 
 smalltalk:
-  - Pharo-6.0
+#  - Pharo-6.0 we disable because of issue #32
+  - Pharo-alpha
 
 env:
   - REVISION="$(if [[ ${TRAVIS_TAG}tag = tag ]] ; then date -u +%Y%m%d-${TRAVIS_BUILD_NUMBER} ; else echo ${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER} ; fi)"
