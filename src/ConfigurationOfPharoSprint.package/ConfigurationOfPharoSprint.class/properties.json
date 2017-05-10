@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "JurajKubelka 5/10/2017 15:30",
+	"super" : "Object",
+	"category" : "ConfigurationOfPharoSprint",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"LastVersionLoad"
+	],
+	"instvars" : [
+		"project"
+	],
+	"name" : "ConfigurationOfPharoSprint",
+	"type" : "normal"
+}
