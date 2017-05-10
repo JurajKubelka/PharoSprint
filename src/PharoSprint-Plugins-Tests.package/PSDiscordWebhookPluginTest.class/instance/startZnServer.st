@@ -1,4 +1,4 @@
-tests
+utility
 startZnServer
 	serverRequests := OrderedCollection new.
 	semaphore := Semaphore new.
