@@ -1,1 +1,0 @@
-I am used for the Pharo Catalog, see http://catalog.pharo.org.
