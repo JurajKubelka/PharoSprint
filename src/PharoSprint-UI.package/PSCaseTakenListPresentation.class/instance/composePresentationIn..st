@@ -8,6 +8,7 @@ composePresentationIn: browser
 		rowHeight: [ :presentation | presentation class defaultRowHeight * 3 ];
 		addSelectionAction: self newCommitChanges;
 		addSelectionAction: self newPutCaseBackToProposedAction;
+		addSelectionAction: self newAllCaseAction;
 		addSelectionAction: self newDoneCaseAction;
 		with: [ :list | self configureList: list ];
 		dropOnItem: [ :draggedObject :targetItem :list | | aPSClient |
