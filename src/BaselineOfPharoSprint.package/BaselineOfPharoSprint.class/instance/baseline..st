@@ -14,7 +14,7 @@ baseline: spec
 					loads: 'default' ];
 			baseline: #'DiscordSt' with: [
 				spec
-					repository: 'github://JurajKubelka/DiscordSt/src';
+					repository: 'github://JurajKubelka/DiscordSt:command-extensions/src';
 					loads: 'default' ];
 			project: #'WebBrowser' with: [
 				spec

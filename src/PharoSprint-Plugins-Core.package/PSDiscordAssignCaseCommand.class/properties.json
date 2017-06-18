@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JurajKubelka 6/18/2017 16:01",
+	"super" : "DSCommandExtension",
+	"category" : "PharoSprint-Plugins-Core-PharoSprint-Plugins-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"client"
+	],
+	"name" : "PSDiscordAssignCaseCommand",
+	"type" : "normal"
+}

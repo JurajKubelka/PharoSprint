@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JurajKubelka 6/18/2017 16:04",
+	"super" : "PSPlugin",
+	"category" : "PharoSprint-Plugins-Core-PharoSprint-Plugins-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"registry"
+	],
+	"name" : "PSDiscordAssignCasePlugin",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "JurajKubelka 6/18/2017 15:56",
+	"super" : "Object",
+	"category" : "PharoSprint-Plugins-Core-PharoSprint-Plugins-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Default"
+	],
+	"instvars" : [
+		"commands",
+		"mutex"
+	],
+	"name" : "PSDiscordCommandRegistrations",
+	"type" : "normal"
+}

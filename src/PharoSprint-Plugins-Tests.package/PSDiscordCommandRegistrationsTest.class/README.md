@@ -1,0 +1,1 @@
+A PSDiscordCommandRegistrationsTest is a test class for testing the behavior of PSDiscordCommandRegistrations
