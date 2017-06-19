@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PSPluginTest",
+	"category" : "PharoSprint-Plugins-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PSDiscordMessagesPluginTest",
+	"type" : "normal"
+}

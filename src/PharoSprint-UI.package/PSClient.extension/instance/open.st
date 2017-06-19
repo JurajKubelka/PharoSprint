@@ -1,4 +1,4 @@
 *PharoSprint-UI
 open
 	<script: 'self alice open'>
-	^ PSClientPresentation openOn: self
+	^ self newClientPresentation openOn: self

@@ -4,6 +4,8 @@ postExecution: aDSMessageCommand
 	| url case |
 	case := aDSMessageCommand model pharoSprintCaseList selectedItem.
 	url := case publicUrl.
-	aDSMessageCommand infoAt: #pharoSprintCase put: url asString.
-	aDSMessageCommand text: aDSMessageCommand text asString, String crlf, '[case ', case id asString, '](', url asString, ')'.
-	
+	aDSMessageCommand 
+		infoAt: #pharoSprintCaseUrl put: url asString;
+		infoAt: #pharoSprintCaseId put: case id;
+		text: aDSMessageCommand text asString, String crlf, '[case ', case id asString, '](', url asString, ')'.
+		

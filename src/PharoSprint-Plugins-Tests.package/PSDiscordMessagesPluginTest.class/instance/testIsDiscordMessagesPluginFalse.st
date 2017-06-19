@@ -1,0 +1,3 @@
+tests
+testIsDiscordMessagesPluginFalse
+	self deny: PSDiscordMessagesPlugin superclass new isDiscordMessagesPlugin.

@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"listExtensions"
+	],
 	"name" : "PSCaseListPresentation",
 	"type" : "normal"
 }

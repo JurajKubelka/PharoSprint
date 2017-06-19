@@ -1,0 +1,3 @@
+instance creation
+newProposedListPresentation
+	^ PSCaseProposedListPresentation new

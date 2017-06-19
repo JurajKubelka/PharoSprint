@@ -1,0 +1,3 @@
+instance creation
+newDoneListPresentation
+	^ PSCaseDoneListPresentation new

@@ -13,4 +13,5 @@ configureList: aList
 		addSelectionAction: self newCopyCaseIdToClipboardAction;
 		addSelectionAction: self newOpenCaseInFogBugzWebpageAction;
 		addSelectionAction: self newDiscussCaseOnDiscordAction;
+		with: [ :theList | self otherExternalListActions: theList ];
 		yourself

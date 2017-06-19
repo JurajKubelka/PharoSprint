@@ -10,13 +10,13 @@ composePresentationIn: browser
 						PSFogBugzInfoModel new fogbugz: client fogbugz; buildWithSpec ] ].
 			tabulator transmit to: #proposedAndAll; andShow: [ :composite | 
 				composite 
-					custom: PSCaseProposedListPresentation new;
+					custom: self newProposedListPresentation;
 					"custom: PSCaseReviewListPresentation new;"
-					custom: PSCaseAllListPresentation new ].
+					custom: self newAllListPresentation ].
 			tabulator transmit to: #taken; andShow: [ :composite | 
-				composite custom: (PSCaseTakenListPresentation new) ].
+				composite custom: self newTakenListPresentation ].
 			tabulator transmit to: #done; andShow: [ :composite | 
-				composite custom: (PSCaseDoneListPresentation new) ].
+				composite custom: self newDoneListPresentation ].
 			"keep only one selection active (deselect the other lists on click)"
 			tabulator transmit
 				from: #proposedAndAll; to: #taken port: #selection; transformed: [ nil ].

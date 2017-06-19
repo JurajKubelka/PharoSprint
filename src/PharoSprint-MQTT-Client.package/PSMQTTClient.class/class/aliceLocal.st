@@ -7,5 +7,6 @@ aliceLocal
 		chat: (MQTTChat new host: NetNameResolver loopBackName; yourself);
 		disablePlugins;
 		addPlugin: PSDiscordAssignCasePlugin newWithDefaultRegistry;
+		addPlugin: PSDiscordMessagesPlugin newWithDefaultClient;
 		connect;
 		yourself

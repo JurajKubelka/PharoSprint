@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JurajKubelka 6/19/2017 17:59",
+	"super" : "PSPlugin",
+	"category" : "PharoSprint-Plugins-Core-PharoSprint-Plugins-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"discordClient"
+	],
+	"name" : "PSDiscordMessagesPlugin",
+	"type" : "normal"
+}
