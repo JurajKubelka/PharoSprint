@@ -13,4 +13,4 @@ testHandleCaseStateUpdatedAnnouncementDone2
 	self assert: serverRequests size equals: 1.
 	self 
 		assert: serverRequests first contents 
-		equals: '{"avatar_url":"https://raw.githubusercontent.com/JurajKubelka/PharoSprint/master/assets/img/icon.png","embeds":[{"color":16711680,"description":"[user one](https://pharo.fogbugz.com/f/personInfo/activity/1) has **done** the case [1 - case one](https://pharo.fogbugz.com/default.asp?1), *using [Pharo Sprint App](http://bit.ly/SprintWeb).*"}],"username":"Pharo Sprint"}'
+		equals: '{"username":"Pharo Sprint","avatar_url":"https://raw.githubusercontent.com/JurajKubelka/PharoSprint/master/assets/img/icon.png","embeds":[{"description":"[user one](https://pharo.fogbugz.com/f/personInfo/activity/1) has **done** the case [1 - case one](https://pharo.fogbugz.com/default.asp?1), *using [Pharo Sprint App](http://bit.ly/SprintWeb).*","color":16711680,"fields":[]}]}'
